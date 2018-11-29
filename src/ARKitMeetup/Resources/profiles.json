@@ -1,0 +1,87 @@
+[
+  {
+    "MemberId": 46305632,
+    "name": "Ness Ninten",
+    "city": "Onett",
+    "country": "us",
+    "bio": "A gifted child from the town of Onett with various PSI powers",
+    "joined": 1335758525000,
+    "status": "active",
+    "Count": 33,
+    "TotalRsvps": 41,
+    "YesRsvps": 40,
+    "NoRsvps": 1,
+    "Photo": {
+      "detect_link": "https://ryandavis.io/content/images/2018/11/ness.png",
+      "display_link": "https://ryandavis.io/content/images/2018/11/ness-a.png"
+    }
+  },
+  {
+    "MemberId": 70640852,
+    "name": "Paula Jones",
+    "city": "Brisbane",
+    "country": "au",
+    "bio": "Uses many powerful PSI powers. Her HP and defense are rather low, but she has high PP and is the fastest of the playable characters.",
+    "joined": 1353771834000,
+    "status": "active",
+    "Count": 3,
+    "TotalRsvps": 34,
+    "YesRsvps": 34,
+    "NoRsvps": 0,
+    "Photo": {
+      "detect_link": "https://ryandavis.io/content/images/2018/11/paula.png",
+      "display_link": "https://ryandavis.io/content/images/2018/11/paula-a.png"
+    }
+  },
+  {
+    "MemberId": 70640852,
+    "name": "Jeff Andonuts",
+    "city": "Winters",
+    "country": "us",
+    "bio": "Unable to use PSI abilities. To compensate for that, he can repair broken objects to turn into useful machines and weapons for battle.",
+    "joined": 1353771834000,
+    "status": "active",
+    "Count": 3,
+    "TotalRsvps": 8,
+    "YesRsvps": 9,
+    "NoRsvps": 0,
+    "Photo": {
+      "detect_link": "https://ryandavis.io/content/images/2018/11/jeff.png",
+      "display_link": "https://ryandavis.io/content/images/2018/11/jeff-a.png"
+    }
+  },
+  {
+    "MemberId": 70640852,
+    "name": "Poo",
+    "city": " Dalaam",
+    "country": "jp",
+    "bio": "Has a wide variety of offensive and defensive PSI, along with being decent at attack and defense, and has a noticeable resistance to PSI Fire and PSI Freeze.",
+    "joined": 1353771834000,
+    "status": "active",
+    "Count": 3,
+    "TotalRsvps": 22,
+    "YesRsvps": 30,
+    "NoRsvps": 0,
+    "Photo": {
+      "detect_link": "https://ryandavis.io/content/images/2018/11/poo.png",
+      "display_link": "https://ryandavis.io/content/images/2018/11/poo-a.png"
+    }
+  },
+  {
+    "MemberId": 140912362,
+    "name": "Ryan Davis",
+    "city": "Brisbane",
+    "country": "au",
+    "bio": "Hobbyist C# developer",
+    "joined": 1396839277000,
+    "status": "active",
+    "Count": 13,
+    "TotalRsvps": 33,
+    "YesRsvps": 30,
+    "NoRsvps": 3,
+    "Photo": {
+      "detect_link": "https://secure.meetupstatic.com/photos/member/2/8/7/d/highres_253390365.jpeg",
+      "display_link": "https://secure.meetupstatic.com/photos/member/2/8/7/d/highres_253390365.jpeg",
+    }
+  }
+  ]

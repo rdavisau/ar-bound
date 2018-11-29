@@ -1,0 +1,1372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{3806D664-CD88-4E32-ADE4-53224A02A307}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ARKitMeetup</RootNamespace>
+    <AssemblyName>ARKitMeetup</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>44528</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchExtraArgs>--enable-repl</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <IntermediateOutputPath>
+    </IntermediateOutputPath>
+    <ExternalConsole>false</ExternalConsole>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CrashReportingDelay>-1</CrashReportingDelay>
+    <OptimizePNGs>
+    </OptimizePNGs>
+    <OnDemandResourcesInitialInstallTags>
+    </OnDemandResourcesInitialInstallTags>
+    <OnDemandResourcesPrefetchOrder>
+    </OnDemandResourcesPrefetchOrder>
+    <NoWarn>
+    </NoWarn>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <LangVersion>Default</LangVersion>
+    <NoStdLib>false</NoStdLib>
+    <WarningsNotAsErrors>
+    </WarningsNotAsErrors>
+    <OnDemandResourcesInitialInstallTags>
+    </OnDemandResourcesInitialInstallTags>
+    <OnDemandResourcesPrefetchOrder>
+    </OnDemandResourcesPrefetchOrder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchExtraArgs>--enable-repl</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>49974</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Continuous.Server.iOS">
+      <HintPath>..\packages\Continuous.2.0.5\lib\Xamarin.iOS10\Continuous.Server.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+      <HintPath>..\packages\System.Reactive.4.0.0\lib\netstandard2.0\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveUI.Events">
+      <HintPath>..\packages\ReactiveUI.Events.9.3.5\lib\xamarinios10\ReactiveUI.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\tile-small.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Untitled 26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <SceneKitAsset Include="art.scnassets\ship.dae" />
+    <SceneKitAsset Include="art.scnassets\texture.png" />
+    <SceneKitAsset Include="art.scnassets\basic-scene.scn" />
+    <SceneKitAsset Include="art.scnassets\characters\guest a.png" />
+    <SceneKitAsset Include="art.scnassets\characters\guest c.png" />
+    <SceneKitAsset Include="art.scnassets\characters\guest d.png" />
+    <SceneKitAsset Include="art.scnassets\basic-prefab.scn" />
+    <SceneKitAsset Include="art.scnassets\thin-prefab.scn" />
+    <SceneKitAsset Include="art.scnassets\starman.scn" />
+    <SceneKitAsset Include="art.scnassets\characters\guest b.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\AppendingLabel.cs" />
+    <Compile Include="Demos\D3-PlaneTracking\AddThingsToPlaneTrackingWithHitTestingViewController.cs" />
+    <Compile Include="Demos\D3-PlaneTracking\PlaneTrackingWithHitTesting.cs" />
+    <Compile Include="Helpers\EBTextDialogViewController.cs" />
+    <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="Demos\D4-ImageTracking\Helpers\UserImage.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="Helpers\InlineTableViewSourceWithoutRowHeight.cs" />
+    <Compile Include="Demos\D1-Base\BaseARViewController.cs" />
+    <Compile Include="Demos\D2-VirtualContent\PredefinedSceneViewController.cs" />
+    <Compile Include="Demos\D2-VirtualContent\EarthboundHomeDecoratorViewController.cs" />
+    <Compile Include="Helpers\EBDialogViewController.cs" />
+    <Compile Include="Demos\D3-PlaneTracking\PlaneTrackingViewController.cs" />
+    <Compile Include="Demos\D4-ImageTracking\Helpers\ImageDetectionReferenceItem.cs" />
+    <Compile Include="Demos\D4-ImageTracking\GenericImageTrackingViewController.cs" />
+    <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Models\MeetupProfile.cs" />
+    <Compile Include="Demos\D4-ImageTracking\Helpers\StaticMeetupService.cs" />
+    <Compile Include="Demos\D4-ImageTracking\MeetupProfileImageTrackingController.cs" />
+    <Compile Include="Demos\D4-ImageTracking\DisplayMeetupProfileViewController.cs" />
+    <Compile Include="Models\DisplayInMenuAttribute.cs" />
+    <Compile Include="Demos\D5-FaceTracking\Helpers\FaceNode.cs" />
+    <Compile Include="Demos\D5-FaceTracking\FaceTrackingViewController.cs" />
+    <Compile Include="Demos\D5-FaceTracking\ExpressionMonitoringViewController.cs" />
+    <Compile Include="Demos\D5-FaceTracking\FaceDetectingViewController.cs" />
+    <Compile Include="Helpers\SoundManager.cs" />
+    <Compile Include="Abstractions\InlineARSessionDelegate.cs" />
+    <Compile Include="Abstractions\MainThreadARSessionDelegate.cs" />
+    <Compile Include="Abstractions\InlineARSCNViewDelegate.cs" />
+    <Compile Include="Abstractions\MainThreadInlineARSCNViewDelegate.cs" />
+    <Compile Include="Demos\D2-VirtualContent\PrefabsSceneViewController.cs" />
+    <Compile Include="Helpers\Matrix4Extensions.cs" />
+    <Compile Include="Demos\D2-VirtualContent\ActionsViewController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="apple_kid.ttf" />
+    <BundleResource Include="Resources\container.png" />
+    <BundleResource Include="Resources\selection.png" />
+    <BundleResource Include="Resources\noselection.png" />
+    <BundleResource Include="Resources\audio\click.wav" />
+    <BundleResource Include="Resources\audio\wow.wav" />
+    <BundleResource Include="Resources\sprites\sprite0.gif" />
+    <BundleResource Include="Resources\sprites\sprite1.gif" />
+    <BundleResource Include="Resources\sprites\sprite10.gif" />
+    <BundleResource Include="Resources\sprites\sprite100.gif" />
+    <BundleResource Include="Resources\sprites\sprite1000.gif" />
+    <BundleResource Include="Resources\sprites\sprite1001.gif" />
+    <BundleResource Include="Resources\sprites\sprite1002.gif" />
+    <BundleResource Include="Resources\sprites\sprite1003.gif" />
+    <BundleResource Include="Resources\sprites\sprite1004.gif" />
+    <BundleResource Include="Resources\sprites\sprite1005.gif" />
+    <BundleResource Include="Resources\sprites\sprite1006.gif" />
+    <BundleResource Include="Resources\sprites\sprite1007.gif" />
+    <BundleResource Include="Resources\sprites\sprite1008.gif" />
+    <BundleResource Include="Resources\sprites\sprite1009.gif" />
+    <BundleResource Include="Resources\sprites\sprite101.gif" />
+    <BundleResource Include="Resources\sprites\sprite1010.gif" />
+    <BundleResource Include="Resources\sprites\sprite1011.gif" />
+    <BundleResource Include="Resources\sprites\sprite1012.gif" />
+    <BundleResource Include="Resources\sprites\sprite1013.gif" />
+    <BundleResource Include="Resources\sprites\sprite1014.gif" />
+    <BundleResource Include="Resources\sprites\sprite1015.gif" />
+    <BundleResource Include="Resources\sprites\sprite1016.gif" />
+    <BundleResource Include="Resources\sprites\sprite1017.gif" />
+    <BundleResource Include="Resources\sprites\sprite1018.gif" />
+    <BundleResource Include="Resources\sprites\sprite1019.gif" />
+    <BundleResource Include="Resources\sprites\sprite102.gif" />
+    <BundleResource Include="Resources\sprites\sprite1020.gif" />
+    <BundleResource Include="Resources\sprites\sprite1021.gif" />
+    <BundleResource Include="Resources\sprites\sprite1022.gif" />
+    <BundleResource Include="Resources\sprites\sprite1023.gif" />
+    <BundleResource Include="Resources\sprites\sprite1024.gif" />
+    <BundleResource Include="Resources\sprites\sprite1025.gif" />
+    <BundleResource Include="Resources\sprites\sprite1026.gif" />
+    <BundleResource Include="Resources\sprites\sprite1027.gif" />
+    <BundleResource Include="Resources\sprites\sprite1028.gif" />
+    <BundleResource Include="Resources\sprites\sprite1029.gif" />
+    <BundleResource Include="Resources\sprites\sprite103.gif" />
+    <BundleResource Include="Resources\sprites\sprite1030.gif" />
+    <BundleResource Include="Resources\sprites\sprite1031.gif" />
+    <BundleResource Include="Resources\sprites\sprite1032.gif" />
+    <BundleResource Include="Resources\sprites\sprite1033.gif" />
+    <BundleResource Include="Resources\sprites\sprite1034.gif" />
+    <BundleResource Include="Resources\sprites\sprite1035.gif" />
+    <BundleResource Include="Resources\sprites\sprite1036.gif" />
+    <BundleResource Include="Resources\sprites\sprite1037.gif" />
+    <BundleResource Include="Resources\sprites\sprite1038.gif" />
+    <BundleResource Include="Resources\sprites\sprite1039.gif" />
+    <BundleResource Include="Resources\sprites\sprite104.gif" />
+    <BundleResource Include="Resources\sprites\sprite1040.gif" />
+    <BundleResource Include="Resources\sprites\sprite1041.gif" />
+    <BundleResource Include="Resources\sprites\sprite1042.gif" />
+    <BundleResource Include="Resources\sprites\sprite1043.gif" />
+    <BundleResource Include="Resources\sprites\sprite1044.gif" />
+    <BundleResource Include="Resources\sprites\sprite1045.gif" />
+    <BundleResource Include="Resources\sprites\sprite1046.gif" />
+    <BundleResource Include="Resources\sprites\sprite1047.gif" />
+    <BundleResource Include="Resources\sprites\sprite1048.gif" />
+    <BundleResource Include="Resources\sprites\sprite1049.gif" />
+    <BundleResource Include="Resources\sprites\sprite105.gif" />
+    <BundleResource Include="Resources\sprites\sprite1050.gif" />
+    <BundleResource Include="Resources\sprites\sprite1051.gif" />
+    <BundleResource Include="Resources\sprites\sprite1052.gif" />
+    <BundleResource Include="Resources\sprites\sprite1053.gif" />
+    <BundleResource Include="Resources\sprites\sprite1054.gif" />
+    <BundleResource Include="Resources\sprites\sprite1055.gif" />
+    <BundleResource Include="Resources\sprites\sprite1056.gif" />
+    <BundleResource Include="Resources\sprites\sprite1057.gif" />
+    <BundleResource Include="Resources\sprites\sprite1058.gif" />
+    <BundleResource Include="Resources\sprites\sprite1059.gif" />
+    <BundleResource Include="Resources\sprites\sprite106.gif" />
+    <BundleResource Include="Resources\sprites\sprite1060.gif" />
+    <BundleResource Include="Resources\sprites\sprite1061.gif" />
+    <BundleResource Include="Resources\sprites\sprite1062.gif" />
+    <BundleResource Include="Resources\sprites\sprite1063.gif" />
+    <BundleResource Include="Resources\sprites\sprite1064.gif" />
+    <BundleResource Include="Resources\sprites\sprite1065.gif" />
+    <BundleResource Include="Resources\sprites\sprite1066.gif" />
+    <BundleResource Include="Resources\sprites\sprite1067.gif" />
+    <BundleResource Include="Resources\sprites\sprite1068.gif" />
+    <BundleResource Include="Resources\sprites\sprite1069.gif" />
+    <BundleResource Include="Resources\sprites\sprite107.gif" />
+    <BundleResource Include="Resources\sprites\sprite1070.gif" />
+    <BundleResource Include="Resources\sprites\sprite1071.gif" />
+    <BundleResource Include="Resources\sprites\sprite1072.gif" />
+    <BundleResource Include="Resources\sprites\sprite1073.gif" />
+    <BundleResource Include="Resources\sprites\sprite1074.gif" />
+    <BundleResource Include="Resources\sprites\sprite1075.gif" />
+    <BundleResource Include="Resources\sprites\sprite1076.gif" />
+    <BundleResource Include="Resources\sprites\sprite1077.gif" />
+    <BundleResource Include="Resources\sprites\sprite1078.gif" />
+    <BundleResource Include="Resources\sprites\sprite1079.gif" />
+    <BundleResource Include="Resources\sprites\sprite108.gif" />
+    <BundleResource Include="Resources\sprites\sprite1080.gif" />
+    <BundleResource Include="Resources\sprites\sprite1081.gif" />
+    <BundleResource Include="Resources\sprites\sprite1082.gif" />
+    <BundleResource Include="Resources\sprites\sprite1083.gif" />
+    <BundleResource Include="Resources\sprites\sprite1084.gif" />
+    <BundleResource Include="Resources\sprites\sprite1085.gif" />
+    <BundleResource Include="Resources\sprites\sprite1086.gif" />
+    <BundleResource Include="Resources\sprites\sprite1087.gif" />
+    <BundleResource Include="Resources\sprites\sprite1088.gif" />
+    <BundleResource Include="Resources\sprites\sprite1089.gif" />
+    <BundleResource Include="Resources\sprites\sprite109.gif" />
+    <BundleResource Include="Resources\sprites\sprite1090.gif" />
+    <BundleResource Include="Resources\sprites\sprite1091.gif" />
+    <BundleResource Include="Resources\sprites\sprite1092.gif" />
+    <BundleResource Include="Resources\sprites\sprite1093.gif" />
+    <BundleResource Include="Resources\sprites\sprite1094.gif" />
+    <BundleResource Include="Resources\sprites\sprite1095.gif" />
+    <BundleResource Include="Resources\sprites\sprite1096.gif" />
+    <BundleResource Include="Resources\sprites\sprite1097.gif" />
+    <BundleResource Include="Resources\sprites\sprite1098.gif" />
+    <BundleResource Include="Resources\sprites\sprite1099.gif" />
+    <BundleResource Include="Resources\sprites\sprite11.gif" />
+    <BundleResource Include="Resources\sprites\sprite110.gif" />
+    <BundleResource Include="Resources\sprites\sprite1100.gif" />
+    <BundleResource Include="Resources\sprites\sprite1101.gif" />
+    <BundleResource Include="Resources\sprites\sprite1102.gif" />
+    <BundleResource Include="Resources\sprites\sprite1103.gif" />
+    <BundleResource Include="Resources\sprites\sprite1104.gif" />
+    <BundleResource Include="Resources\sprites\sprite1105.gif" />
+    <BundleResource Include="Resources\sprites\sprite1106.gif" />
+    <BundleResource Include="Resources\sprites\sprite1107.gif" />
+    <BundleResource Include="Resources\sprites\sprite1108.gif" />
+    <BundleResource Include="Resources\sprites\sprite1109.gif" />
+    <BundleResource Include="Resources\sprites\sprite111.gif" />
+    <BundleResource Include="Resources\sprites\sprite1110.gif" />
+    <BundleResource Include="Resources\sprites\sprite1111.gif" />
+    <BundleResource Include="Resources\sprites\sprite1112.gif" />
+    <BundleResource Include="Resources\sprites\sprite1113.gif" />
+    <BundleResource Include="Resources\sprites\sprite1114.gif" />
+    <BundleResource Include="Resources\sprites\sprite1115.gif" />
+    <BundleResource Include="Resources\sprites\sprite1116.gif" />
+    <BundleResource Include="Resources\sprites\sprite1117.gif" />
+    <BundleResource Include="Resources\sprites\sprite1118.gif" />
+    <BundleResource Include="Resources\sprites\sprite1119.gif" />
+    <BundleResource Include="Resources\sprites\sprite112.gif" />
+    <BundleResource Include="Resources\sprites\sprite1120.gif" />
+    <BundleResource Include="Resources\sprites\sprite1121.gif" />
+    <BundleResource Include="Resources\sprites\sprite1122.gif" />
+    <BundleResource Include="Resources\sprites\sprite1123.gif" />
+    <BundleResource Include="Resources\sprites\sprite1124.gif" />
+    <BundleResource Include="Resources\sprites\sprite1125.gif" />
+    <BundleResource Include="Resources\sprites\sprite1126.gif" />
+    <BundleResource Include="Resources\sprites\sprite1127.gif" />
+    <BundleResource Include="Resources\sprites\sprite1128.gif" />
+    <BundleResource Include="Resources\sprites\sprite1129.gif" />
+    <BundleResource Include="Resources\sprites\sprite113.gif" />
+    <BundleResource Include="Resources\sprites\sprite1130.gif" />
+    <BundleResource Include="Resources\sprites\sprite1131.gif" />
+    <BundleResource Include="Resources\sprites\sprite1132.gif" />
+    <BundleResource Include="Resources\sprites\sprite1133.gif" />
+    <BundleResource Include="Resources\sprites\sprite1134.gif" />
+    <BundleResource Include="Resources\sprites\sprite1135.gif" />
+    <BundleResource Include="Resources\sprites\sprite1136.gif" />
+    <BundleResource Include="Resources\sprites\sprite1137.gif" />
+    <BundleResource Include="Resources\sprites\sprite1138.gif" />
+    <BundleResource Include="Resources\sprites\sprite1139.gif" />
+    <BundleResource Include="Resources\sprites\sprite114.gif" />
+    <BundleResource Include="Resources\sprites\sprite1140.gif" />
+    <BundleResource Include="Resources\sprites\sprite1141.gif" />
+    <BundleResource Include="Resources\sprites\sprite1142.gif" />
+    <BundleResource Include="Resources\sprites\sprite1143.gif" />
+    <BundleResource Include="Resources\sprites\sprite115.gif" />
+    <BundleResource Include="Resources\sprites\sprite116.gif" />
+    <BundleResource Include="Resources\sprites\sprite117.gif" />
+    <BundleResource Include="Resources\sprites\sprite118.gif" />
+    <BundleResource Include="Resources\sprites\sprite119.gif" />
+    <BundleResource Include="Resources\sprites\sprite12.gif" />
+    <BundleResource Include="Resources\sprites\sprite120.gif" />
+    <BundleResource Include="Resources\sprites\sprite121.gif" />
+    <BundleResource Include="Resources\sprites\sprite122.gif" />
+    <BundleResource Include="Resources\sprites\sprite123.gif" />
+    <BundleResource Include="Resources\sprites\sprite124.gif" />
+    <BundleResource Include="Resources\sprites\sprite125.gif" />
+    <BundleResource Include="Resources\sprites\sprite126.gif" />
+    <BundleResource Include="Resources\sprites\sprite127.gif" />
+    <BundleResource Include="Resources\sprites\sprite128.gif" />
+    <BundleResource Include="Resources\sprites\sprite129.gif" />
+    <BundleResource Include="Resources\sprites\sprite13.gif" />
+    <BundleResource Include="Resources\sprites\sprite130.gif" />
+    <BundleResource Include="Resources\sprites\sprite131.gif" />
+    <BundleResource Include="Resources\sprites\sprite132.gif" />
+    <BundleResource Include="Resources\sprites\sprite133.gif" />
+    <BundleResource Include="Resources\sprites\sprite134.gif" />
+    <BundleResource Include="Resources\sprites\sprite135.gif" />
+    <BundleResource Include="Resources\sprites\sprite136.gif" />
+    <BundleResource Include="Resources\sprites\sprite137.gif" />
+    <BundleResource Include="Resources\sprites\sprite138.gif" />
+    <BundleResource Include="Resources\sprites\sprite139.gif" />
+    <BundleResource Include="Resources\sprites\sprite14.gif" />
+    <BundleResource Include="Resources\sprites\sprite140.gif" />
+    <BundleResource Include="Resources\sprites\sprite141.gif" />
+    <BundleResource Include="Resources\sprites\sprite142.gif" />
+    <BundleResource Include="Resources\sprites\sprite143.gif" />
+    <BundleResource Include="Resources\sprites\sprite144.gif" />
+    <BundleResource Include="Resources\sprites\sprite145.gif" />
+    <BundleResource Include="Resources\sprites\sprite146.gif" />
+    <BundleResource Include="Resources\sprites\sprite147.gif" />
+    <BundleResource Include="Resources\sprites\sprite148.gif" />
+    <BundleResource Include="Resources\sprites\sprite149.gif" />
+    <BundleResource Include="Resources\sprites\sprite15.gif" />
+    <BundleResource Include="Resources\sprites\sprite150.gif" />
+    <BundleResource Include="Resources\sprites\sprite151.gif" />
+    <BundleResource Include="Resources\sprites\sprite152.gif" />
+    <BundleResource Include="Resources\sprites\sprite153.gif" />
+    <BundleResource Include="Resources\sprites\sprite154.gif" />
+    <BundleResource Include="Resources\sprites\sprite155.gif" />
+    <BundleResource Include="Resources\sprites\sprite156.gif" />
+    <BundleResource Include="Resources\sprites\sprite157.gif" />
+    <BundleResource Include="Resources\sprites\sprite158.gif" />
+    <BundleResource Include="Resources\sprites\sprite159.gif" />
+    <BundleResource Include="Resources\sprites\sprite16.gif" />
+    <BundleResource Include="Resources\sprites\sprite160.gif" />
+    <BundleResource Include="Resources\sprites\sprite161.gif" />
+    <BundleResource Include="Resources\sprites\sprite162.gif" />
+    <BundleResource Include="Resources\sprites\sprite163.gif" />
+    <BundleResource Include="Resources\sprites\sprite164.gif" />
+    <BundleResource Include="Resources\sprites\sprite165.gif" />
+    <BundleResource Include="Resources\sprites\sprite166.gif" />
+    <BundleResource Include="Resources\sprites\sprite167.gif" />
+    <BundleResource Include="Resources\sprites\sprite168.gif" />
+    <BundleResource Include="Resources\sprites\sprite169.gif" />
+    <BundleResource Include="Resources\sprites\sprite17.gif" />
+    <BundleResource Include="Resources\sprites\sprite170.gif" />
+    <BundleResource Include="Resources\sprites\sprite171.gif" />
+    <BundleResource Include="Resources\sprites\sprite172.gif" />
+    <BundleResource Include="Resources\sprites\sprite173.gif" />
+    <BundleResource Include="Resources\sprites\sprite174.gif" />
+    <BundleResource Include="Resources\sprites\sprite175.gif" />
+    <BundleResource Include="Resources\sprites\sprite176.gif" />
+    <BundleResource Include="Resources\sprites\sprite177.gif" />
+    <BundleResource Include="Resources\sprites\sprite178.gif" />
+    <BundleResource Include="Resources\sprites\sprite179.gif" />
+    <BundleResource Include="Resources\sprites\sprite18.gif" />
+    <BundleResource Include="Resources\sprites\sprite180.gif" />
+    <BundleResource Include="Resources\sprites\sprite181.gif" />
+    <BundleResource Include="Resources\sprites\sprite182.gif" />
+    <BundleResource Include="Resources\sprites\sprite183.gif" />
+    <BundleResource Include="Resources\sprites\sprite184.gif" />
+    <BundleResource Include="Resources\sprites\sprite185.gif" />
+    <BundleResource Include="Resources\sprites\sprite186.gif" />
+    <BundleResource Include="Resources\sprites\sprite187.gif" />
+    <BundleResource Include="Resources\sprites\sprite188.gif" />
+    <BundleResource Include="Resources\sprites\sprite189.gif" />
+    <BundleResource Include="Resources\sprites\sprite19.gif" />
+    <BundleResource Include="Resources\sprites\sprite190.gif" />
+    <BundleResource Include="Resources\sprites\sprite191.gif" />
+    <BundleResource Include="Resources\sprites\sprite192.gif" />
+    <BundleResource Include="Resources\sprites\sprite193.gif" />
+    <BundleResource Include="Resources\sprites\sprite194.gif" />
+    <BundleResource Include="Resources\sprites\sprite195.gif" />
+    <BundleResource Include="Resources\sprites\sprite196.gif" />
+    <BundleResource Include="Resources\sprites\sprite197.gif" />
+    <BundleResource Include="Resources\sprites\sprite198.gif" />
+    <BundleResource Include="Resources\sprites\sprite199.gif" />
+    <BundleResource Include="Resources\sprites\sprite2.gif" />
+    <BundleResource Include="Resources\sprites\sprite20.gif" />
+    <BundleResource Include="Resources\sprites\sprite200.gif" />
+    <BundleResource Include="Resources\sprites\sprite201.gif" />
+    <BundleResource Include="Resources\sprites\sprite202.gif" />
+    <BundleResource Include="Resources\sprites\sprite203.gif" />
+    <BundleResource Include="Resources\sprites\sprite204.gif" />
+    <BundleResource Include="Resources\sprites\sprite205.gif" />
+    <BundleResource Include="Resources\sprites\sprite206.gif" />
+    <BundleResource Include="Resources\sprites\sprite207.gif" />
+    <BundleResource Include="Resources\sprites\sprite208.gif" />
+    <BundleResource Include="Resources\sprites\sprite209.gif" />
+    <BundleResource Include="Resources\sprites\sprite21.gif" />
+    <BundleResource Include="Resources\sprites\sprite210.gif" />
+    <BundleResource Include="Resources\sprites\sprite211.gif" />
+    <BundleResource Include="Resources\sprites\sprite212.gif" />
+    <BundleResource Include="Resources\sprites\sprite213.gif" />
+    <BundleResource Include="Resources\sprites\sprite214.gif" />
+    <BundleResource Include="Resources\sprites\sprite215.gif" />
+    <BundleResource Include="Resources\sprites\sprite216.gif" />
+    <BundleResource Include="Resources\sprites\sprite217.gif" />
+    <BundleResource Include="Resources\sprites\sprite218.gif" />
+    <BundleResource Include="Resources\sprites\sprite219.gif" />
+    <BundleResource Include="Resources\sprites\sprite22.gif" />
+    <BundleResource Include="Resources\sprites\sprite220.gif" />
+    <BundleResource Include="Resources\sprites\sprite221.gif" />
+    <BundleResource Include="Resources\sprites\sprite222.gif" />
+    <BundleResource Include="Resources\sprites\sprite223.gif" />
+    <BundleResource Include="Resources\sprites\sprite224.gif" />
+    <BundleResource Include="Resources\sprites\sprite225.gif" />
+    <BundleResource Include="Resources\sprites\sprite226.gif" />
+    <BundleResource Include="Resources\sprites\sprite227.gif" />
+    <BundleResource Include="Resources\sprites\sprite228.gif" />
+    <BundleResource Include="Resources\sprites\sprite229.gif" />
+    <BundleResource Include="Resources\sprites\sprite23.gif" />
+    <BundleResource Include="Resources\sprites\sprite230.gif" />
+    <BundleResource Include="Resources\sprites\sprite231.gif" />
+    <BundleResource Include="Resources\sprites\sprite232.gif" />
+    <BundleResource Include="Resources\sprites\sprite233.gif" />
+    <BundleResource Include="Resources\sprites\sprite234.gif" />
+    <BundleResource Include="Resources\sprites\sprite235.gif" />
+    <BundleResource Include="Resources\sprites\sprite236.gif" />
+    <BundleResource Include="Resources\sprites\sprite237.gif" />
+    <BundleResource Include="Resources\sprites\sprite238.gif" />
+    <BundleResource Include="Resources\sprites\sprite239.gif" />
+    <BundleResource Include="Resources\sprites\sprite24.gif" />
+    <BundleResource Include="Resources\sprites\sprite240.gif" />
+    <BundleResource Include="Resources\sprites\sprite241.gif" />
+    <BundleResource Include="Resources\sprites\sprite242.gif" />
+    <BundleResource Include="Resources\sprites\sprite243.gif" />
+    <BundleResource Include="Resources\sprites\sprite244.gif" />
+    <BundleResource Include="Resources\sprites\sprite245.gif" />
+    <BundleResource Include="Resources\sprites\sprite246.gif" />
+    <BundleResource Include="Resources\sprites\sprite247.gif" />
+    <BundleResource Include="Resources\sprites\sprite248.gif" />
+    <BundleResource Include="Resources\sprites\sprite249.gif" />
+    <BundleResource Include="Resources\sprites\sprite25.gif" />
+    <BundleResource Include="Resources\sprites\sprite250.gif" />
+    <BundleResource Include="Resources\sprites\sprite251.gif" />
+    <BundleResource Include="Resources\sprites\sprite252.gif" />
+    <BundleResource Include="Resources\sprites\sprite253.gif" />
+    <BundleResource Include="Resources\sprites\sprite254.gif" />
+    <BundleResource Include="Resources\sprites\sprite255.gif" />
+    <BundleResource Include="Resources\sprites\sprite256.gif" />
+    <BundleResource Include="Resources\sprites\sprite257.gif" />
+    <BundleResource Include="Resources\sprites\sprite258.gif" />
+    <BundleResource Include="Resources\sprites\sprite259.gif" />
+    <BundleResource Include="Resources\sprites\sprite26.gif" />
+    <BundleResource Include="Resources\sprites\sprite260.gif" />
+    <BundleResource Include="Resources\sprites\sprite261.gif" />
+    <BundleResource Include="Resources\sprites\sprite262.gif" />
+    <BundleResource Include="Resources\sprites\sprite263.gif" />
+    <BundleResource Include="Resources\sprites\sprite264.gif" />
+    <BundleResource Include="Resources\sprites\sprite265.gif" />
+    <BundleResource Include="Resources\sprites\sprite266.gif" />
+    <BundleResource Include="Resources\sprites\sprite267.gif" />
+    <BundleResource Include="Resources\sprites\sprite268.gif" />
+    <BundleResource Include="Resources\sprites\sprite269.gif" />
+    <BundleResource Include="Resources\sprites\sprite27.gif" />
+    <BundleResource Include="Resources\sprites\sprite270.gif" />
+    <BundleResource Include="Resources\sprites\sprite271.gif" />
+    <BundleResource Include="Resources\sprites\sprite272.gif" />
+    <BundleResource Include="Resources\sprites\sprite273.gif" />
+    <BundleResource Include="Resources\sprites\sprite274.gif" />
+    <BundleResource Include="Resources\sprites\sprite275.gif" />
+    <BundleResource Include="Resources\sprites\sprite276.gif" />
+    <BundleResource Include="Resources\sprites\sprite277.gif" />
+    <BundleResource Include="Resources\sprites\sprite278.gif" />
+    <BundleResource Include="Resources\sprites\sprite279.gif" />
+    <BundleResource Include="Resources\sprites\sprite28.gif" />
+    <BundleResource Include="Resources\sprites\sprite280.gif" />
+    <BundleResource Include="Resources\sprites\sprite281.gif" />
+    <BundleResource Include="Resources\sprites\sprite282.gif" />
+    <BundleResource Include="Resources\sprites\sprite283.gif" />
+    <BundleResource Include="Resources\sprites\sprite284.gif" />
+    <BundleResource Include="Resources\sprites\sprite285.gif" />
+    <BundleResource Include="Resources\sprites\sprite286.gif" />
+    <BundleResource Include="Resources\sprites\sprite287.gif" />
+    <BundleResource Include="Resources\sprites\sprite288.gif" />
+    <BundleResource Include="Resources\sprites\sprite289.gif" />
+    <BundleResource Include="Resources\sprites\sprite29.gif" />
+    <BundleResource Include="Resources\sprites\sprite290.gif" />
+    <BundleResource Include="Resources\sprites\sprite291.gif" />
+    <BundleResource Include="Resources\sprites\sprite292.gif" />
+    <BundleResource Include="Resources\sprites\sprite293.gif" />
+    <BundleResource Include="Resources\sprites\sprite294.gif" />
+    <BundleResource Include="Resources\sprites\sprite295.gif" />
+    <BundleResource Include="Resources\sprites\sprite296.gif" />
+    <BundleResource Include="Resources\sprites\sprite297.gif" />
+    <BundleResource Include="Resources\sprites\sprite298.gif" />
+    <BundleResource Include="Resources\sprites\sprite299.gif" />
+    <BundleResource Include="Resources\sprites\sprite3.gif" />
+    <BundleResource Include="Resources\sprites\sprite30.gif" />
+    <BundleResource Include="Resources\sprites\sprite300.gif" />
+    <BundleResource Include="Resources\sprites\sprite301.gif" />
+    <BundleResource Include="Resources\sprites\sprite302.gif" />
+    <BundleResource Include="Resources\sprites\sprite303.gif" />
+    <BundleResource Include="Resources\sprites\sprite304.gif" />
+    <BundleResource Include="Resources\sprites\sprite305.gif" />
+    <BundleResource Include="Resources\sprites\sprite306.gif" />
+    <BundleResource Include="Resources\sprites\sprite307.gif" />
+    <BundleResource Include="Resources\sprites\sprite308.gif" />
+    <BundleResource Include="Resources\sprites\sprite309.gif" />
+    <BundleResource Include="Resources\sprites\sprite31.gif" />
+    <BundleResource Include="Resources\sprites\sprite310.gif" />
+    <BundleResource Include="Resources\sprites\sprite311.gif" />
+    <BundleResource Include="Resources\sprites\sprite312.gif" />
+    <BundleResource Include="Resources\sprites\sprite313.gif" />
+    <BundleResource Include="Resources\sprites\sprite314.gif" />
+    <BundleResource Include="Resources\sprites\sprite315.gif" />
+    <BundleResource Include="Resources\sprites\sprite316.gif" />
+    <BundleResource Include="Resources\sprites\sprite317.gif" />
+    <BundleResource Include="Resources\sprites\sprite318.gif" />
+    <BundleResource Include="Resources\sprites\sprite319.gif" />
+    <BundleResource Include="Resources\sprites\sprite32.gif" />
+    <BundleResource Include="Resources\sprites\sprite320.gif" />
+    <BundleResource Include="Resources\sprites\sprite321.gif" />
+    <BundleResource Include="Resources\sprites\sprite322.gif" />
+    <BundleResource Include="Resources\sprites\sprite323.gif" />
+    <BundleResource Include="Resources\sprites\sprite324.gif" />
+    <BundleResource Include="Resources\sprites\sprite325.gif" />
+    <BundleResource Include="Resources\sprites\sprite326.gif" />
+    <BundleResource Include="Resources\sprites\sprite327.gif" />
+    <BundleResource Include="Resources\sprites\sprite328.gif" />
+    <BundleResource Include="Resources\sprites\sprite329.gif" />
+    <BundleResource Include="Resources\sprites\sprite33.gif" />
+    <BundleResource Include="Resources\sprites\sprite330.gif" />
+    <BundleResource Include="Resources\sprites\sprite331.gif" />
+    <BundleResource Include="Resources\sprites\sprite332.gif" />
+    <BundleResource Include="Resources\sprites\sprite333.gif" />
+    <BundleResource Include="Resources\sprites\sprite334.gif" />
+    <BundleResource Include="Resources\sprites\sprite335.gif" />
+    <BundleResource Include="Resources\sprites\sprite336.gif" />
+    <BundleResource Include="Resources\sprites\sprite337.gif" />
+    <BundleResource Include="Resources\sprites\sprite338.gif" />
+    <BundleResource Include="Resources\sprites\sprite339.gif" />
+    <BundleResource Include="Resources\sprites\sprite34.gif" />
+    <BundleResource Include="Resources\sprites\sprite340.gif" />
+    <BundleResource Include="Resources\sprites\sprite341.gif" />
+    <BundleResource Include="Resources\sprites\sprite342.gif" />
+    <BundleResource Include="Resources\sprites\sprite343.gif" />
+    <BundleResource Include="Resources\sprites\sprite344.gif" />
+    <BundleResource Include="Resources\sprites\sprite345.gif" />
+    <BundleResource Include="Resources\sprites\sprite346.gif" />
+    <BundleResource Include="Resources\sprites\sprite347.gif" />
+    <BundleResource Include="Resources\sprites\sprite348.gif" />
+    <BundleResource Include="Resources\sprites\sprite349.gif" />
+    <BundleResource Include="Resources\sprites\sprite35.gif" />
+    <BundleResource Include="Resources\sprites\sprite350.gif" />
+    <BundleResource Include="Resources\sprites\sprite351.gif" />
+    <BundleResource Include="Resources\sprites\sprite352.gif" />
+    <BundleResource Include="Resources\sprites\sprite353.gif" />
+    <BundleResource Include="Resources\sprites\sprite354.gif" />
+    <BundleResource Include="Resources\sprites\sprite355.gif" />
+    <BundleResource Include="Resources\sprites\sprite356.gif" />
+    <BundleResource Include="Resources\sprites\sprite357.gif" />
+    <BundleResource Include="Resources\sprites\sprite358.gif" />
+    <BundleResource Include="Resources\sprites\sprite359.gif" />
+    <BundleResource Include="Resources\sprites\sprite36.gif" />
+    <BundleResource Include="Resources\sprites\sprite360.gif" />
+    <BundleResource Include="Resources\sprites\sprite361.gif" />
+    <BundleResource Include="Resources\sprites\sprite362.gif" />
+    <BundleResource Include="Resources\sprites\sprite363.gif" />
+    <BundleResource Include="Resources\sprites\sprite364.gif" />
+    <BundleResource Include="Resources\sprites\sprite365.gif" />
+    <BundleResource Include="Resources\sprites\sprite366.gif" />
+    <BundleResource Include="Resources\sprites\sprite367.gif" />
+    <BundleResource Include="Resources\sprites\sprite368.gif" />
+    <BundleResource Include="Resources\sprites\sprite369.gif" />
+    <BundleResource Include="Resources\sprites\sprite37.gif" />
+    <BundleResource Include="Resources\sprites\sprite370.gif" />
+    <BundleResource Include="Resources\sprites\sprite371.gif" />
+    <BundleResource Include="Resources\sprites\sprite372.gif" />
+    <BundleResource Include="Resources\sprites\sprite373.gif" />
+    <BundleResource Include="Resources\sprites\sprite374.gif" />
+    <BundleResource Include="Resources\sprites\sprite375.gif" />
+    <BundleResource Include="Resources\sprites\sprite376.gif" />
+    <BundleResource Include="Resources\sprites\sprite377.gif" />
+    <BundleResource Include="Resources\sprites\sprite378.gif" />
+    <BundleResource Include="Resources\sprites\sprite379.gif" />
+    <BundleResource Include="Resources\sprites\sprite38.gif" />
+    <BundleResource Include="Resources\sprites\sprite380.gif" />
+    <BundleResource Include="Resources\sprites\sprite381.gif" />
+    <BundleResource Include="Resources\sprites\sprite382.gif" />
+    <BundleResource Include="Resources\sprites\sprite383.gif" />
+    <BundleResource Include="Resources\sprites\sprite384.gif" />
+    <BundleResource Include="Resources\sprites\sprite385.gif" />
+    <BundleResource Include="Resources\sprites\sprite386.gif" />
+    <BundleResource Include="Resources\sprites\sprite387.gif" />
+    <BundleResource Include="Resources\sprites\sprite388.gif" />
+    <BundleResource Include="Resources\sprites\sprite389.gif" />
+    <BundleResource Include="Resources\sprites\sprite39.gif" />
+    <BundleResource Include="Resources\sprites\sprite390.gif" />
+    <BundleResource Include="Resources\sprites\sprite391.gif" />
+    <BundleResource Include="Resources\sprites\sprite392.gif" />
+    <BundleResource Include="Resources\sprites\sprite393.gif" />
+    <BundleResource Include="Resources\sprites\sprite394.gif" />
+    <BundleResource Include="Resources\sprites\sprite395.gif" />
+    <BundleResource Include="Resources\sprites\sprite396.gif" />
+    <BundleResource Include="Resources\sprites\sprite397.gif" />
+    <BundleResource Include="Resources\sprites\sprite398.gif" />
+    <BundleResource Include="Resources\sprites\sprite399.gif" />
+    <BundleResource Include="Resources\sprites\sprite4.gif" />
+    <BundleResource Include="Resources\sprites\sprite40.gif" />
+    <BundleResource Include="Resources\sprites\sprite400.gif" />
+    <BundleResource Include="Resources\sprites\sprite401.gif" />
+    <BundleResource Include="Resources\sprites\sprite402.gif" />
+    <BundleResource Include="Resources\sprites\sprite403.gif" />
+    <BundleResource Include="Resources\sprites\sprite404.gif" />
+    <BundleResource Include="Resources\sprites\sprite405.gif" />
+    <BundleResource Include="Resources\sprites\sprite406.gif" />
+    <BundleResource Include="Resources\sprites\sprite407.gif" />
+    <BundleResource Include="Resources\sprites\sprite408.gif" />
+    <BundleResource Include="Resources\sprites\sprite409.gif" />
+    <BundleResource Include="Resources\sprites\sprite41.gif" />
+    <BundleResource Include="Resources\sprites\sprite410.gif" />
+    <BundleResource Include="Resources\sprites\sprite411.gif" />
+    <BundleResource Include="Resources\sprites\sprite412.gif" />
+    <BundleResource Include="Resources\sprites\sprite413.gif" />
+    <BundleResource Include="Resources\sprites\sprite414.gif" />
+    <BundleResource Include="Resources\sprites\sprite415.gif" />
+    <BundleResource Include="Resources\sprites\sprite416.gif" />
+    <BundleResource Include="Resources\sprites\sprite417.gif" />
+    <BundleResource Include="Resources\sprites\sprite418.gif" />
+    <BundleResource Include="Resources\sprites\sprite419.gif" />
+    <BundleResource Include="Resources\sprites\sprite42.gif" />
+    <BundleResource Include="Resources\sprites\sprite420.gif" />
+    <BundleResource Include="Resources\sprites\sprite421.gif" />
+    <BundleResource Include="Resources\sprites\sprite422.gif" />
+    <BundleResource Include="Resources\sprites\sprite423.gif" />
+    <BundleResource Include="Resources\sprites\sprite424.gif" />
+    <BundleResource Include="Resources\sprites\sprite425.gif" />
+    <BundleResource Include="Resources\sprites\sprite426.gif" />
+    <BundleResource Include="Resources\sprites\sprite427.gif" />
+    <BundleResource Include="Resources\sprites\sprite428.gif" />
+    <BundleResource Include="Resources\sprites\sprite429.gif" />
+    <BundleResource Include="Resources\sprites\sprite43.gif" />
+    <BundleResource Include="Resources\sprites\sprite430.gif" />
+    <BundleResource Include="Resources\sprites\sprite431.gif" />
+    <BundleResource Include="Resources\sprites\sprite432.gif" />
+    <BundleResource Include="Resources\sprites\sprite433.gif" />
+    <BundleResource Include="Resources\sprites\sprite434.gif" />
+    <BundleResource Include="Resources\sprites\sprite435.gif" />
+    <BundleResource Include="Resources\sprites\sprite436.gif" />
+    <BundleResource Include="Resources\sprites\sprite437.gif" />
+    <BundleResource Include="Resources\sprites\sprite438.gif" />
+    <BundleResource Include="Resources\sprites\sprite439.gif" />
+    <BundleResource Include="Resources\sprites\sprite44.gif" />
+    <BundleResource Include="Resources\sprites\sprite440.gif" />
+    <BundleResource Include="Resources\sprites\sprite441.gif" />
+    <BundleResource Include="Resources\sprites\sprite442.gif" />
+    <BundleResource Include="Resources\sprites\sprite443.gif" />
+    <BundleResource Include="Resources\sprites\sprite444.gif" />
+    <BundleResource Include="Resources\sprites\sprite445.gif" />
+    <BundleResource Include="Resources\sprites\sprite446.gif" />
+    <BundleResource Include="Resources\sprites\sprite447.gif" />
+    <BundleResource Include="Resources\sprites\sprite448.gif" />
+    <BundleResource Include="Resources\sprites\sprite449.gif" />
+    <BundleResource Include="Resources\sprites\sprite45.gif" />
+    <BundleResource Include="Resources\sprites\sprite450.gif" />
+    <BundleResource Include="Resources\sprites\sprite451.gif" />
+    <BundleResource Include="Resources\sprites\sprite452.gif" />
+    <BundleResource Include="Resources\sprites\sprite453.gif" />
+    <BundleResource Include="Resources\sprites\sprite454.gif" />
+    <BundleResource Include="Resources\sprites\sprite455.gif" />
+    <BundleResource Include="Resources\sprites\sprite456.gif" />
+    <BundleResource Include="Resources\sprites\sprite457.gif" />
+    <BundleResource Include="Resources\sprites\sprite458.gif" />
+    <BundleResource Include="Resources\sprites\sprite459.gif" />
+    <BundleResource Include="Resources\sprites\sprite46.gif" />
+    <BundleResource Include="Resources\sprites\sprite460.gif" />
+    <BundleResource Include="Resources\sprites\sprite461.gif" />
+    <BundleResource Include="Resources\sprites\sprite462.gif" />
+    <BundleResource Include="Resources\sprites\sprite463.gif" />
+    <BundleResource Include="Resources\sprites\sprite464.gif" />
+    <BundleResource Include="Resources\sprites\sprite465.gif" />
+    <BundleResource Include="Resources\sprites\sprite466.gif" />
+    <BundleResource Include="Resources\sprites\sprite467.gif" />
+    <BundleResource Include="Resources\sprites\sprite468.gif" />
+    <BundleResource Include="Resources\sprites\sprite469.gif" />
+    <BundleResource Include="Resources\sprites\sprite47.gif" />
+    <BundleResource Include="Resources\sprites\sprite470.gif" />
+    <BundleResource Include="Resources\sprites\sprite471.gif" />
+    <BundleResource Include="Resources\sprites\sprite472.gif" />
+    <BundleResource Include="Resources\sprites\sprite473.gif" />
+    <BundleResource Include="Resources\sprites\sprite474.gif" />
+    <BundleResource Include="Resources\sprites\sprite475.gif" />
+    <BundleResource Include="Resources\sprites\sprite476.gif" />
+    <BundleResource Include="Resources\sprites\sprite477.gif" />
+    <BundleResource Include="Resources\sprites\sprite478.gif" />
+    <BundleResource Include="Resources\sprites\sprite479.gif" />
+    <BundleResource Include="Resources\sprites\sprite48.gif" />
+    <BundleResource Include="Resources\sprites\sprite480.gif" />
+    <BundleResource Include="Resources\sprites\sprite481.gif" />
+    <BundleResource Include="Resources\sprites\sprite482.gif" />
+    <BundleResource Include="Resources\sprites\sprite483.gif" />
+    <BundleResource Include="Resources\sprites\sprite484.gif" />
+    <BundleResource Include="Resources\sprites\sprite485.gif" />
+    <BundleResource Include="Resources\sprites\sprite486.gif" />
+    <BundleResource Include="Resources\sprites\sprite487.gif" />
+    <BundleResource Include="Resources\sprites\sprite488.gif" />
+    <BundleResource Include="Resources\sprites\sprite489.gif" />
+    <BundleResource Include="Resources\sprites\sprite49.gif" />
+    <BundleResource Include="Resources\sprites\sprite490.gif" />
+    <BundleResource Include="Resources\sprites\sprite491.gif" />
+    <BundleResource Include="Resources\sprites\sprite492.gif" />
+    <BundleResource Include="Resources\sprites\sprite493.gif" />
+    <BundleResource Include="Resources\sprites\sprite494.gif" />
+    <BundleResource Include="Resources\sprites\sprite495.gif" />
+    <BundleResource Include="Resources\sprites\sprite496.gif" />
+    <BundleResource Include="Resources\sprites\sprite497.gif" />
+    <BundleResource Include="Resources\sprites\sprite498.gif" />
+    <BundleResource Include="Resources\sprites\sprite499.gif" />
+    <BundleResource Include="Resources\sprites\sprite5.gif" />
+    <BundleResource Include="Resources\sprites\sprite50.gif" />
+    <BundleResource Include="Resources\sprites\sprite500.gif" />
+    <BundleResource Include="Resources\sprites\sprite501.gif" />
+    <BundleResource Include="Resources\sprites\sprite502.gif" />
+    <BundleResource Include="Resources\sprites\sprite503.gif" />
+    <BundleResource Include="Resources\sprites\sprite504.gif" />
+    <BundleResource Include="Resources\sprites\sprite505.gif" />
+    <BundleResource Include="Resources\sprites\sprite506.gif" />
+    <BundleResource Include="Resources\sprites\sprite507.gif" />
+    <BundleResource Include="Resources\sprites\sprite508.gif" />
+    <BundleResource Include="Resources\sprites\sprite509.gif" />
+    <BundleResource Include="Resources\sprites\sprite51.gif" />
+    <BundleResource Include="Resources\sprites\sprite510.gif" />
+    <BundleResource Include="Resources\sprites\sprite511.gif" />
+    <BundleResource Include="Resources\sprites\sprite512.gif" />
+    <BundleResource Include="Resources\sprites\sprite513.gif" />
+    <BundleResource Include="Resources\sprites\sprite514.gif" />
+    <BundleResource Include="Resources\sprites\sprite515.gif" />
+    <BundleResource Include="Resources\sprites\sprite516.gif" />
+    <BundleResource Include="Resources\sprites\sprite517.gif" />
+    <BundleResource Include="Resources\sprites\sprite518.gif" />
+    <BundleResource Include="Resources\sprites\sprite519.gif" />
+    <BundleResource Include="Resources\sprites\sprite52.gif" />
+    <BundleResource Include="Resources\sprites\sprite520.gif" />
+    <BundleResource Include="Resources\sprites\sprite521.gif" />
+    <BundleResource Include="Resources\sprites\sprite522.gif" />
+    <BundleResource Include="Resources\sprites\sprite523.gif" />
+    <BundleResource Include="Resources\sprites\sprite524.gif" />
+    <BundleResource Include="Resources\sprites\sprite525.gif" />
+    <BundleResource Include="Resources\sprites\sprite526.gif" />
+    <BundleResource Include="Resources\sprites\sprite527.gif" />
+    <BundleResource Include="Resources\sprites\sprite528.gif" />
+    <BundleResource Include="Resources\sprites\sprite529.gif" />
+    <BundleResource Include="Resources\sprites\sprite53.gif" />
+    <BundleResource Include="Resources\sprites\sprite530.gif" />
+    <BundleResource Include="Resources\sprites\sprite531.gif" />
+    <BundleResource Include="Resources\sprites\sprite532.gif" />
+    <BundleResource Include="Resources\sprites\sprite533.gif" />
+    <BundleResource Include="Resources\sprites\sprite534.gif" />
+    <BundleResource Include="Resources\sprites\sprite535.gif" />
+    <BundleResource Include="Resources\sprites\sprite536.gif" />
+    <BundleResource Include="Resources\sprites\sprite537.gif" />
+    <BundleResource Include="Resources\sprites\sprite538.gif" />
+    <BundleResource Include="Resources\sprites\sprite539.gif" />
+    <BundleResource Include="Resources\sprites\sprite54.gif" />
+    <BundleResource Include="Resources\sprites\sprite540.gif" />
+    <BundleResource Include="Resources\sprites\sprite541.gif" />
+    <BundleResource Include="Resources\sprites\sprite542.gif" />
+    <BundleResource Include="Resources\sprites\sprite543.gif" />
+    <BundleResource Include="Resources\sprites\sprite544.gif" />
+    <BundleResource Include="Resources\sprites\sprite545.gif" />
+    <BundleResource Include="Resources\sprites\sprite546.gif" />
+    <BundleResource Include="Resources\sprites\sprite547.gif" />
+    <BundleResource Include="Resources\sprites\sprite548.gif" />
+    <BundleResource Include="Resources\sprites\sprite549.gif" />
+    <BundleResource Include="Resources\sprites\sprite55.gif" />
+    <BundleResource Include="Resources\sprites\sprite550.gif" />
+    <BundleResource Include="Resources\sprites\sprite551.gif" />
+    <BundleResource Include="Resources\sprites\sprite552.gif" />
+    <BundleResource Include="Resources\sprites\sprite553.gif" />
+    <BundleResource Include="Resources\sprites\sprite554.gif" />
+    <BundleResource Include="Resources\sprites\sprite555.gif" />
+    <BundleResource Include="Resources\sprites\sprite556.gif" />
+    <BundleResource Include="Resources\sprites\sprite557.gif" />
+    <BundleResource Include="Resources\sprites\sprite558.gif" />
+    <BundleResource Include="Resources\sprites\sprite559.gif" />
+    <BundleResource Include="Resources\sprites\sprite56.gif" />
+    <BundleResource Include="Resources\sprites\sprite560.gif" />
+    <BundleResource Include="Resources\sprites\sprite561.gif" />
+    <BundleResource Include="Resources\sprites\sprite562.gif" />
+    <BundleResource Include="Resources\sprites\sprite563.gif" />
+    <BundleResource Include="Resources\sprites\sprite564.gif" />
+    <BundleResource Include="Resources\sprites\sprite565.gif" />
+    <BundleResource Include="Resources\sprites\sprite566.gif" />
+    <BundleResource Include="Resources\sprites\sprite567.gif" />
+    <BundleResource Include="Resources\sprites\sprite568.gif" />
+    <BundleResource Include="Resources\sprites\sprite569.gif" />
+    <BundleResource Include="Resources\sprites\sprite57.gif" />
+    <BundleResource Include="Resources\sprites\sprite570.gif" />
+    <BundleResource Include="Resources\sprites\sprite571.gif" />
+    <BundleResource Include="Resources\sprites\sprite572.gif" />
+    <BundleResource Include="Resources\sprites\sprite573.gif" />
+    <BundleResource Include="Resources\sprites\sprite574.gif" />
+    <BundleResource Include="Resources\sprites\sprite575.gif" />
+    <BundleResource Include="Resources\sprites\sprite576.gif" />
+    <BundleResource Include="Resources\sprites\sprite577.gif" />
+    <BundleResource Include="Resources\sprites\sprite578.gif" />
+    <BundleResource Include="Resources\sprites\sprite579.gif" />
+    <BundleResource Include="Resources\sprites\sprite58.gif" />
+    <BundleResource Include="Resources\sprites\sprite580.gif" />
+    <BundleResource Include="Resources\sprites\sprite581.gif" />
+    <BundleResource Include="Resources\sprites\sprite582.gif" />
+    <BundleResource Include="Resources\sprites\sprite583.gif" />
+    <BundleResource Include="Resources\sprites\sprite584.gif" />
+    <BundleResource Include="Resources\sprites\sprite585.gif" />
+    <BundleResource Include="Resources\sprites\sprite586.gif" />
+    <BundleResource Include="Resources\sprites\sprite587.gif" />
+    <BundleResource Include="Resources\sprites\sprite588.gif" />
+    <BundleResource Include="Resources\sprites\sprite589.gif" />
+    <BundleResource Include="Resources\sprites\sprite59.gif" />
+    <BundleResource Include="Resources\sprites\sprite590.gif" />
+    <BundleResource Include="Resources\sprites\sprite591.gif" />
+    <BundleResource Include="Resources\sprites\sprite592.gif" />
+    <BundleResource Include="Resources\sprites\sprite593.gif" />
+    <BundleResource Include="Resources\sprites\sprite594.gif" />
+    <BundleResource Include="Resources\sprites\sprite595.gif" />
+    <BundleResource Include="Resources\sprites\sprite596.gif" />
+    <BundleResource Include="Resources\sprites\sprite597.gif" />
+    <BundleResource Include="Resources\sprites\sprite598.gif" />
+    <BundleResource Include="Resources\sprites\sprite599.gif" />
+    <BundleResource Include="Resources\sprites\sprite6.gif" />
+    <BundleResource Include="Resources\sprites\sprite60.gif" />
+    <BundleResource Include="Resources\sprites\sprite600.gif" />
+    <BundleResource Include="Resources\sprites\sprite601.gif" />
+    <BundleResource Include="Resources\sprites\sprite602.gif" />
+    <BundleResource Include="Resources\sprites\sprite603.gif" />
+    <BundleResource Include="Resources\sprites\sprite604.gif" />
+    <BundleResource Include="Resources\sprites\sprite605.gif" />
+    <BundleResource Include="Resources\sprites\sprite606.gif" />
+    <BundleResource Include="Resources\sprites\sprite607.gif" />
+    <BundleResource Include="Resources\sprites\sprite608.gif" />
+    <BundleResource Include="Resources\sprites\sprite609.gif" />
+    <BundleResource Include="Resources\sprites\sprite61.gif" />
+    <BundleResource Include="Resources\sprites\sprite610.gif" />
+    <BundleResource Include="Resources\sprites\sprite611.gif" />
+    <BundleResource Include="Resources\sprites\sprite612.gif" />
+    <BundleResource Include="Resources\sprites\sprite613.gif" />
+    <BundleResource Include="Resources\sprites\sprite614.gif" />
+    <BundleResource Include="Resources\sprites\sprite615.gif" />
+    <BundleResource Include="Resources\sprites\sprite616.gif" />
+    <BundleResource Include="Resources\sprites\sprite617.gif" />
+    <BundleResource Include="Resources\sprites\sprite618.gif" />
+    <BundleResource Include="Resources\sprites\sprite619.gif" />
+    <BundleResource Include="Resources\sprites\sprite62.gif" />
+    <BundleResource Include="Resources\sprites\sprite620.gif" />
+    <BundleResource Include="Resources\sprites\sprite621.gif" />
+    <BundleResource Include="Resources\sprites\sprite622.gif" />
+    <BundleResource Include="Resources\sprites\sprite623.gif" />
+    <BundleResource Include="Resources\sprites\sprite624.gif" />
+    <BundleResource Include="Resources\sprites\sprite625.gif" />
+    <BundleResource Include="Resources\sprites\sprite626.gif" />
+    <BundleResource Include="Resources\sprites\sprite627.gif" />
+    <BundleResource Include="Resources\sprites\sprite628.gif" />
+    <BundleResource Include="Resources\sprites\sprite629.gif" />
+    <BundleResource Include="Resources\sprites\sprite63.gif" />
+    <BundleResource Include="Resources\sprites\sprite630.gif" />
+    <BundleResource Include="Resources\sprites\sprite631.gif" />
+    <BundleResource Include="Resources\sprites\sprite632.gif" />
+    <BundleResource Include="Resources\sprites\sprite633.gif" />
+    <BundleResource Include="Resources\sprites\sprite634.gif" />
+    <BundleResource Include="Resources\sprites\sprite635.gif" />
+    <BundleResource Include="Resources\sprites\sprite636.gif" />
+    <BundleResource Include="Resources\sprites\sprite637.gif" />
+    <BundleResource Include="Resources\sprites\sprite638.gif" />
+    <BundleResource Include="Resources\sprites\sprite639.gif" />
+    <BundleResource Include="Resources\sprites\sprite64.gif" />
+    <BundleResource Include="Resources\sprites\sprite640.gif" />
+    <BundleResource Include="Resources\sprites\sprite641.gif" />
+    <BundleResource Include="Resources\sprites\sprite642.gif" />
+    <BundleResource Include="Resources\sprites\sprite643.gif" />
+    <BundleResource Include="Resources\sprites\sprite644.gif" />
+    <BundleResource Include="Resources\sprites\sprite645.gif" />
+    <BundleResource Include="Resources\sprites\sprite646.gif" />
+    <BundleResource Include="Resources\sprites\sprite647.gif" />
+    <BundleResource Include="Resources\sprites\sprite648.gif" />
+    <BundleResource Include="Resources\sprites\sprite649.gif" />
+    <BundleResource Include="Resources\sprites\sprite65.gif" />
+    <BundleResource Include="Resources\sprites\sprite650.gif" />
+    <BundleResource Include="Resources\sprites\sprite651.gif" />
+    <BundleResource Include="Resources\sprites\sprite652.gif" />
+    <BundleResource Include="Resources\sprites\sprite653.gif" />
+    <BundleResource Include="Resources\sprites\sprite654.gif" />
+    <BundleResource Include="Resources\sprites\sprite655.gif" />
+    <BundleResource Include="Resources\sprites\sprite656.gif" />
+    <BundleResource Include="Resources\sprites\sprite657.gif" />
+    <BundleResource Include="Resources\sprites\sprite658.gif" />
+    <BundleResource Include="Resources\sprites\sprite659.gif" />
+    <BundleResource Include="Resources\sprites\sprite66.gif" />
+    <BundleResource Include="Resources\sprites\sprite660.gif" />
+    <BundleResource Include="Resources\sprites\sprite661.gif" />
+    <BundleResource Include="Resources\sprites\sprite662.gif" />
+    <BundleResource Include="Resources\sprites\sprite663.gif" />
+    <BundleResource Include="Resources\sprites\sprite664.gif" />
+    <BundleResource Include="Resources\sprites\sprite665.gif" />
+    <BundleResource Include="Resources\sprites\sprite666.gif" />
+    <BundleResource Include="Resources\sprites\sprite667.gif" />
+    <BundleResource Include="Resources\sprites\sprite668.gif" />
+    <BundleResource Include="Resources\sprites\sprite669.gif" />
+    <BundleResource Include="Resources\sprites\sprite67.gif" />
+    <BundleResource Include="Resources\sprites\sprite670.gif" />
+    <BundleResource Include="Resources\sprites\sprite671.gif" />
+    <BundleResource Include="Resources\sprites\sprite672.gif" />
+    <BundleResource Include="Resources\sprites\sprite673.gif" />
+    <BundleResource Include="Resources\sprites\sprite674.gif" />
+    <BundleResource Include="Resources\sprites\sprite675.gif" />
+    <BundleResource Include="Resources\sprites\sprite676.gif" />
+    <BundleResource Include="Resources\sprites\sprite677.gif" />
+    <BundleResource Include="Resources\sprites\sprite678.gif" />
+    <BundleResource Include="Resources\sprites\sprite679.gif" />
+    <BundleResource Include="Resources\sprites\sprite68.gif" />
+    <BundleResource Include="Resources\sprites\sprite680.gif" />
+    <BundleResource Include="Resources\sprites\sprite681.gif" />
+    <BundleResource Include="Resources\sprites\sprite682.gif" />
+    <BundleResource Include="Resources\sprites\sprite683.gif" />
+    <BundleResource Include="Resources\sprites\sprite684.gif" />
+    <BundleResource Include="Resources\sprites\sprite685.gif" />
+    <BundleResource Include="Resources\sprites\sprite686.gif" />
+    <BundleResource Include="Resources\sprites\sprite687.gif" />
+    <BundleResource Include="Resources\sprites\sprite688.gif" />
+    <BundleResource Include="Resources\sprites\sprite689.gif" />
+    <BundleResource Include="Resources\sprites\sprite69.gif" />
+    <BundleResource Include="Resources\sprites\sprite690.gif" />
+    <BundleResource Include="Resources\sprites\sprite691.gif" />
+    <BundleResource Include="Resources\sprites\sprite692.gif" />
+    <BundleResource Include="Resources\sprites\sprite693.gif" />
+    <BundleResource Include="Resources\sprites\sprite694.gif" />
+    <BundleResource Include="Resources\sprites\sprite695.gif" />
+    <BundleResource Include="Resources\sprites\sprite696.gif" />
+    <BundleResource Include="Resources\sprites\sprite697.gif" />
+    <BundleResource Include="Resources\sprites\sprite698.gif" />
+    <BundleResource Include="Resources\sprites\sprite699.gif" />
+    <BundleResource Include="Resources\sprites\sprite7.gif" />
+    <BundleResource Include="Resources\sprites\sprite70.gif" />
+    <BundleResource Include="Resources\sprites\sprite700.gif" />
+    <BundleResource Include="Resources\sprites\sprite701.gif" />
+    <BundleResource Include="Resources\sprites\sprite702.gif" />
+    <BundleResource Include="Resources\sprites\sprite703.gif" />
+    <BundleResource Include="Resources\sprites\sprite704.gif" />
+    <BundleResource Include="Resources\sprites\sprite705.gif" />
+    <BundleResource Include="Resources\sprites\sprite706.gif" />
+    <BundleResource Include="Resources\sprites\sprite707.gif" />
+    <BundleResource Include="Resources\sprites\sprite708.gif" />
+    <BundleResource Include="Resources\sprites\sprite709.gif" />
+    <BundleResource Include="Resources\sprites\sprite71.gif" />
+    <BundleResource Include="Resources\sprites\sprite710.gif" />
+    <BundleResource Include="Resources\sprites\sprite711.gif" />
+    <BundleResource Include="Resources\sprites\sprite712.gif" />
+    <BundleResource Include="Resources\sprites\sprite713.gif" />
+    <BundleResource Include="Resources\sprites\sprite714.gif" />
+    <BundleResource Include="Resources\sprites\sprite715.gif" />
+    <BundleResource Include="Resources\sprites\sprite716.gif" />
+    <BundleResource Include="Resources\sprites\sprite717.gif" />
+    <BundleResource Include="Resources\sprites\sprite718.gif" />
+    <BundleResource Include="Resources\sprites\sprite719.gif" />
+    <BundleResource Include="Resources\sprites\sprite72.gif" />
+    <BundleResource Include="Resources\sprites\sprite720.gif" />
+    <BundleResource Include="Resources\sprites\sprite721.gif" />
+    <BundleResource Include="Resources\sprites\sprite722.gif" />
+    <BundleResource Include="Resources\sprites\sprite723.gif" />
+    <BundleResource Include="Resources\sprites\sprite724.gif" />
+    <BundleResource Include="Resources\sprites\sprite725.gif" />
+    <BundleResource Include="Resources\sprites\sprite726.gif" />
+    <BundleResource Include="Resources\sprites\sprite727.gif" />
+    <BundleResource Include="Resources\sprites\sprite728.gif" />
+    <BundleResource Include="Resources\sprites\sprite729.gif" />
+    <BundleResource Include="Resources\sprites\sprite73.gif" />
+    <BundleResource Include="Resources\sprites\sprite730.gif" />
+    <BundleResource Include="Resources\sprites\sprite731.gif" />
+    <BundleResource Include="Resources\sprites\sprite732.gif" />
+    <BundleResource Include="Resources\sprites\sprite733.gif" />
+    <BundleResource Include="Resources\sprites\sprite734.gif" />
+    <BundleResource Include="Resources\sprites\sprite735.gif" />
+    <BundleResource Include="Resources\sprites\sprite736.gif" />
+    <BundleResource Include="Resources\sprites\sprite737.gif" />
+    <BundleResource Include="Resources\sprites\sprite738.gif" />
+    <BundleResource Include="Resources\sprites\sprite739.gif" />
+    <BundleResource Include="Resources\sprites\sprite74.gif" />
+    <BundleResource Include="Resources\sprites\sprite740.gif" />
+    <BundleResource Include="Resources\sprites\sprite741.gif" />
+    <BundleResource Include="Resources\sprites\sprite742.gif" />
+    <BundleResource Include="Resources\sprites\sprite743.gif" />
+    <BundleResource Include="Resources\sprites\sprite744.gif" />
+    <BundleResource Include="Resources\sprites\sprite745.gif" />
+    <BundleResource Include="Resources\sprites\sprite746.gif" />
+    <BundleResource Include="Resources\sprites\sprite747.gif" />
+    <BundleResource Include="Resources\sprites\sprite748.gif" />
+    <BundleResource Include="Resources\sprites\sprite749.gif" />
+    <BundleResource Include="Resources\sprites\sprite75.gif" />
+    <BundleResource Include="Resources\sprites\sprite750.gif" />
+    <BundleResource Include="Resources\sprites\sprite751.gif" />
+    <BundleResource Include="Resources\sprites\sprite752.gif" />
+    <BundleResource Include="Resources\sprites\sprite753.gif" />
+    <BundleResource Include="Resources\sprites\sprite754.gif" />
+    <BundleResource Include="Resources\sprites\sprite755.gif" />
+    <BundleResource Include="Resources\sprites\sprite756.gif" />
+    <BundleResource Include="Resources\sprites\sprite757.gif" />
+    <BundleResource Include="Resources\sprites\sprite758.gif" />
+    <BundleResource Include="Resources\sprites\sprite759.gif" />
+    <BundleResource Include="Resources\sprites\sprite76.gif" />
+    <BundleResource Include="Resources\sprites\sprite760.gif" />
+    <BundleResource Include="Resources\sprites\sprite761.gif" />
+    <BundleResource Include="Resources\sprites\sprite762.gif" />
+    <BundleResource Include="Resources\sprites\sprite763.gif" />
+    <BundleResource Include="Resources\sprites\sprite764.gif" />
+    <BundleResource Include="Resources\sprites\sprite765.gif" />
+    <BundleResource Include="Resources\sprites\sprite766.gif" />
+    <BundleResource Include="Resources\sprites\sprite767.gif" />
+    <BundleResource Include="Resources\sprites\sprite768.gif" />
+    <BundleResource Include="Resources\sprites\sprite769.gif" />
+    <BundleResource Include="Resources\sprites\sprite77.gif" />
+    <BundleResource Include="Resources\sprites\sprite770.gif" />
+    <BundleResource Include="Resources\sprites\sprite771.gif" />
+    <BundleResource Include="Resources\sprites\sprite772.gif" />
+    <BundleResource Include="Resources\sprites\sprite773.gif" />
+    <BundleResource Include="Resources\sprites\sprite774.gif" />
+    <BundleResource Include="Resources\sprites\sprite775.gif" />
+    <BundleResource Include="Resources\sprites\sprite776.gif" />
+    <BundleResource Include="Resources\sprites\sprite777.gif" />
+    <BundleResource Include="Resources\sprites\sprite778.gif" />
+    <BundleResource Include="Resources\sprites\sprite779.gif" />
+    <BundleResource Include="Resources\sprites\sprite78.gif" />
+    <BundleResource Include="Resources\sprites\sprite780.gif" />
+    <BundleResource Include="Resources\sprites\sprite781.gif" />
+    <BundleResource Include="Resources\sprites\sprite782.gif" />
+    <BundleResource Include="Resources\sprites\sprite783.gif" />
+    <BundleResource Include="Resources\sprites\sprite784.gif" />
+    <BundleResource Include="Resources\sprites\sprite785.gif" />
+    <BundleResource Include="Resources\sprites\sprite786.gif" />
+    <BundleResource Include="Resources\sprites\sprite787.gif" />
+    <BundleResource Include="Resources\sprites\sprite788.gif" />
+    <BundleResource Include="Resources\sprites\sprite789.gif" />
+    <BundleResource Include="Resources\sprites\sprite79.gif" />
+    <BundleResource Include="Resources\sprites\sprite790.gif" />
+    <BundleResource Include="Resources\sprites\sprite791.gif" />
+    <BundleResource Include="Resources\sprites\sprite792.gif" />
+    <BundleResource Include="Resources\sprites\sprite793.gif" />
+    <BundleResource Include="Resources\sprites\sprite794.gif" />
+    <BundleResource Include="Resources\sprites\sprite795.gif" />
+    <BundleResource Include="Resources\sprites\sprite796.gif" />
+    <BundleResource Include="Resources\sprites\sprite797.gif" />
+    <BundleResource Include="Resources\sprites\sprite798.gif" />
+    <BundleResource Include="Resources\sprites\sprite799.gif" />
+    <BundleResource Include="Resources\sprites\sprite8.gif" />
+    <BundleResource Include="Resources\sprites\sprite80.gif" />
+    <BundleResource Include="Resources\sprites\sprite800.gif" />
+    <BundleResource Include="Resources\sprites\sprite801.gif" />
+    <BundleResource Include="Resources\sprites\sprite802.gif" />
+    <BundleResource Include="Resources\sprites\sprite803.gif" />
+    <BundleResource Include="Resources\sprites\sprite804.gif" />
+    <BundleResource Include="Resources\sprites\sprite805.gif" />
+    <BundleResource Include="Resources\sprites\sprite806.gif" />
+    <BundleResource Include="Resources\sprites\sprite807.gif" />
+    <BundleResource Include="Resources\sprites\sprite808.gif" />
+    <BundleResource Include="Resources\sprites\sprite809.gif" />
+    <BundleResource Include="Resources\sprites\sprite81.gif" />
+    <BundleResource Include="Resources\sprites\sprite810.gif" />
+    <BundleResource Include="Resources\sprites\sprite811.gif" />
+    <BundleResource Include="Resources\sprites\sprite812.gif" />
+    <BundleResource Include="Resources\sprites\sprite813.gif" />
+    <BundleResource Include="Resources\sprites\sprite814.gif" />
+    <BundleResource Include="Resources\sprites\sprite815.gif" />
+    <BundleResource Include="Resources\sprites\sprite816.gif" />
+    <BundleResource Include="Resources\sprites\sprite817.gif" />
+    <BundleResource Include="Resources\sprites\sprite818.gif" />
+    <BundleResource Include="Resources\sprites\sprite819.gif" />
+    <BundleResource Include="Resources\sprites\sprite82.gif" />
+    <BundleResource Include="Resources\sprites\sprite820.gif" />
+    <BundleResource Include="Resources\sprites\sprite821.gif" />
+    <BundleResource Include="Resources\sprites\sprite822.gif" />
+    <BundleResource Include="Resources\sprites\sprite823.gif" />
+    <BundleResource Include="Resources\sprites\sprite824.gif" />
+    <BundleResource Include="Resources\sprites\sprite825.gif" />
+    <BundleResource Include="Resources\sprites\sprite826.gif" />
+    <BundleResource Include="Resources\sprites\sprite827.gif" />
+    <BundleResource Include="Resources\sprites\sprite828.gif" />
+    <BundleResource Include="Resources\sprites\sprite829.gif" />
+    <BundleResource Include="Resources\sprites\sprite83.gif" />
+    <BundleResource Include="Resources\sprites\sprite830.gif" />
+    <BundleResource Include="Resources\sprites\sprite831.gif" />
+    <BundleResource Include="Resources\sprites\sprite832.gif" />
+    <BundleResource Include="Resources\sprites\sprite833.gif" />
+    <BundleResource Include="Resources\sprites\sprite834.gif" />
+    <BundleResource Include="Resources\sprites\sprite835.gif" />
+    <BundleResource Include="Resources\sprites\sprite836.gif" />
+    <BundleResource Include="Resources\sprites\sprite837.gif" />
+    <BundleResource Include="Resources\sprites\sprite838.gif" />
+    <BundleResource Include="Resources\sprites\sprite839.gif" />
+    <BundleResource Include="Resources\sprites\sprite84.gif" />
+    <BundleResource Include="Resources\sprites\sprite840.gif" />
+    <BundleResource Include="Resources\sprites\sprite841.gif" />
+    <BundleResource Include="Resources\sprites\sprite842.gif" />
+    <BundleResource Include="Resources\sprites\sprite843.gif" />
+    <BundleResource Include="Resources\sprites\sprite844.gif" />
+    <BundleResource Include="Resources\sprites\sprite845.gif" />
+    <BundleResource Include="Resources\sprites\sprite846.gif" />
+    <BundleResource Include="Resources\sprites\sprite847.gif" />
+    <BundleResource Include="Resources\sprites\sprite848.gif" />
+    <BundleResource Include="Resources\sprites\sprite849.gif" />
+    <BundleResource Include="Resources\sprites\sprite85.gif" />
+    <BundleResource Include="Resources\sprites\sprite850.gif" />
+    <BundleResource Include="Resources\sprites\sprite851.gif" />
+    <BundleResource Include="Resources\sprites\sprite852.gif" />
+    <BundleResource Include="Resources\sprites\sprite853.gif" />
+    <BundleResource Include="Resources\sprites\sprite854.gif" />
+    <BundleResource Include="Resources\sprites\sprite855.gif" />
+    <BundleResource Include="Resources\sprites\sprite856.gif" />
+    <BundleResource Include="Resources\sprites\sprite857.gif" />
+    <BundleResource Include="Resources\sprites\sprite858.gif" />
+    <BundleResource Include="Resources\sprites\sprite859.gif" />
+    <BundleResource Include="Resources\sprites\sprite86.gif" />
+    <BundleResource Include="Resources\sprites\sprite860.gif" />
+    <BundleResource Include="Resources\sprites\sprite861.gif" />
+    <BundleResource Include="Resources\sprites\sprite862.gif" />
+    <BundleResource Include="Resources\sprites\sprite863.gif" />
+    <BundleResource Include="Resources\sprites\sprite864.gif" />
+    <BundleResource Include="Resources\sprites\sprite865.gif" />
+    <BundleResource Include="Resources\sprites\sprite866.gif" />
+    <BundleResource Include="Resources\sprites\sprite867.gif" />
+    <BundleResource Include="Resources\sprites\sprite868.gif" />
+    <BundleResource Include="Resources\sprites\sprite869.gif" />
+    <BundleResource Include="Resources\sprites\sprite87.gif" />
+    <BundleResource Include="Resources\sprites\sprite870.gif" />
+    <BundleResource Include="Resources\sprites\sprite871.gif" />
+    <BundleResource Include="Resources\sprites\sprite872.gif" />
+    <BundleResource Include="Resources\sprites\sprite873.gif" />
+    <BundleResource Include="Resources\sprites\sprite874.gif" />
+    <BundleResource Include="Resources\sprites\sprite875.gif" />
+    <BundleResource Include="Resources\sprites\sprite876.gif" />
+    <BundleResource Include="Resources\sprites\sprite877.gif" />
+    <BundleResource Include="Resources\sprites\sprite878.gif" />
+    <BundleResource Include="Resources\sprites\sprite879.gif" />
+    <BundleResource Include="Resources\sprites\sprite88.gif" />
+    <BundleResource Include="Resources\sprites\sprite880.gif" />
+    <BundleResource Include="Resources\sprites\sprite881.gif" />
+    <BundleResource Include="Resources\sprites\sprite882.gif" />
+    <BundleResource Include="Resources\sprites\sprite883.gif" />
+    <BundleResource Include="Resources\sprites\sprite884.gif" />
+    <BundleResource Include="Resources\sprites\sprite885.gif" />
+    <BundleResource Include="Resources\sprites\sprite886.gif" />
+    <BundleResource Include="Resources\sprites\sprite887.gif" />
+    <BundleResource Include="Resources\sprites\sprite888.gif" />
+    <BundleResource Include="Resources\sprites\sprite889.gif" />
+    <BundleResource Include="Resources\sprites\sprite89.gif" />
+    <BundleResource Include="Resources\sprites\sprite890.gif" />
+    <BundleResource Include="Resources\sprites\sprite891.gif" />
+    <BundleResource Include="Resources\sprites\sprite892.gif" />
+    <BundleResource Include="Resources\sprites\sprite893.gif" />
+    <BundleResource Include="Resources\sprites\sprite894.gif" />
+    <BundleResource Include="Resources\sprites\sprite895.gif" />
+    <BundleResource Include="Resources\sprites\sprite896.gif" />
+    <BundleResource Include="Resources\sprites\sprite897.gif" />
+    <BundleResource Include="Resources\sprites\sprite898.gif" />
+    <BundleResource Include="Resources\sprites\sprite899.gif" />
+    <BundleResource Include="Resources\sprites\sprite9.gif" />
+    <BundleResource Include="Resources\sprites\sprite90.gif" />
+    <BundleResource Include="Resources\sprites\sprite900.gif" />
+    <BundleResource Include="Resources\sprites\sprite901.gif" />
+    <BundleResource Include="Resources\sprites\sprite902.gif" />
+    <BundleResource Include="Resources\sprites\sprite903.gif" />
+    <BundleResource Include="Resources\sprites\sprite904.gif" />
+    <BundleResource Include="Resources\sprites\sprite905.gif" />
+    <BundleResource Include="Resources\sprites\sprite906.gif" />
+    <BundleResource Include="Resources\sprites\sprite907.gif" />
+    <BundleResource Include="Resources\sprites\sprite908.gif" />
+    <BundleResource Include="Resources\sprites\sprite909.gif" />
+    <BundleResource Include="Resources\sprites\sprite91.gif" />
+    <BundleResource Include="Resources\sprites\sprite910.gif" />
+    <BundleResource Include="Resources\sprites\sprite911.gif" />
+    <BundleResource Include="Resources\sprites\sprite912.gif" />
+    <BundleResource Include="Resources\sprites\sprite913.gif" />
+    <BundleResource Include="Resources\sprites\sprite914.gif" />
+    <BundleResource Include="Resources\sprites\sprite915.gif" />
+    <BundleResource Include="Resources\sprites\sprite916.gif" />
+    <BundleResource Include="Resources\sprites\sprite917.gif" />
+    <BundleResource Include="Resources\sprites\sprite918.gif" />
+    <BundleResource Include="Resources\sprites\sprite919.gif" />
+    <BundleResource Include="Resources\sprites\sprite92.gif" />
+    <BundleResource Include="Resources\sprites\sprite920.gif" />
+    <BundleResource Include="Resources\sprites\sprite921.gif" />
+    <BundleResource Include="Resources\sprites\sprite922.gif" />
+    <BundleResource Include="Resources\sprites\sprite923.gif" />
+    <BundleResource Include="Resources\sprites\sprite924.gif" />
+    <BundleResource Include="Resources\sprites\sprite925.gif" />
+    <BundleResource Include="Resources\sprites\sprite926.gif" />
+    <BundleResource Include="Resources\sprites\sprite927.gif" />
+    <BundleResource Include="Resources\sprites\sprite928.gif" />
+    <BundleResource Include="Resources\sprites\sprite929.gif" />
+    <BundleResource Include="Resources\sprites\sprite93.gif" />
+    <BundleResource Include="Resources\sprites\sprite930.gif" />
+    <BundleResource Include="Resources\sprites\sprite931.gif" />
+    <BundleResource Include="Resources\sprites\sprite932.gif" />
+    <BundleResource Include="Resources\sprites\sprite933.gif" />
+    <BundleResource Include="Resources\sprites\sprite934.gif" />
+    <BundleResource Include="Resources\sprites\sprite935.gif" />
+    <BundleResource Include="Resources\sprites\sprite936.gif" />
+    <BundleResource Include="Resources\sprites\sprite937.gif" />
+    <BundleResource Include="Resources\sprites\sprite938.gif" />
+    <BundleResource Include="Resources\sprites\sprite939.gif" />
+    <BundleResource Include="Resources\sprites\sprite94.gif" />
+    <BundleResource Include="Resources\sprites\sprite940.gif" />
+    <BundleResource Include="Resources\sprites\sprite941.gif" />
+    <BundleResource Include="Resources\sprites\sprite942.gif" />
+    <BundleResource Include="Resources\sprites\sprite943.gif" />
+    <BundleResource Include="Resources\sprites\sprite944.gif" />
+    <BundleResource Include="Resources\sprites\sprite945.gif" />
+    <BundleResource Include="Resources\sprites\sprite946.gif" />
+    <BundleResource Include="Resources\sprites\sprite947.gif" />
+    <BundleResource Include="Resources\sprites\sprite948.gif" />
+    <BundleResource Include="Resources\sprites\sprite949.gif" />
+    <BundleResource Include="Resources\sprites\sprite95.gif" />
+    <BundleResource Include="Resources\sprites\sprite950.gif" />
+    <BundleResource Include="Resources\sprites\sprite951.gif" />
+    <BundleResource Include="Resources\sprites\sprite952.gif" />
+    <BundleResource Include="Resources\sprites\sprite953.gif" />
+    <BundleResource Include="Resources\sprites\sprite954.gif" />
+    <BundleResource Include="Resources\sprites\sprite955.gif" />
+    <BundleResource Include="Resources\sprites\sprite956.gif" />
+    <BundleResource Include="Resources\sprites\sprite957.gif" />
+    <BundleResource Include="Resources\sprites\sprite958.gif" />
+    <BundleResource Include="Resources\sprites\sprite959.gif" />
+    <BundleResource Include="Resources\sprites\sprite96.gif" />
+    <BundleResource Include="Resources\sprites\sprite960.gif" />
+    <BundleResource Include="Resources\sprites\sprite961.gif" />
+    <BundleResource Include="Resources\sprites\sprite962.gif" />
+    <BundleResource Include="Resources\sprites\sprite963.gif" />
+    <BundleResource Include="Resources\sprites\sprite964.gif" />
+    <BundleResource Include="Resources\sprites\sprite965.gif" />
+    <BundleResource Include="Resources\sprites\sprite966.gif" />
+    <BundleResource Include="Resources\sprites\sprite967.gif" />
+    <BundleResource Include="Resources\sprites\sprite968.gif" />
+    <BundleResource Include="Resources\sprites\sprite969.gif" />
+    <BundleResource Include="Resources\sprites\sprite97.gif" />
+    <BundleResource Include="Resources\sprites\sprite970.gif" />
+    <BundleResource Include="Resources\sprites\sprite971.gif" />
+    <BundleResource Include="Resources\sprites\sprite972.gif" />
+    <BundleResource Include="Resources\sprites\sprite973.gif" />
+    <BundleResource Include="Resources\sprites\sprite974.gif" />
+    <BundleResource Include="Resources\sprites\sprite975.gif" />
+    <BundleResource Include="Resources\sprites\sprite976.gif" />
+    <BundleResource Include="Resources\sprites\sprite977.gif" />
+    <BundleResource Include="Resources\sprites\sprite978.gif" />
+    <BundleResource Include="Resources\sprites\sprite979.gif" />
+    <BundleResource Include="Resources\sprites\sprite98.gif" />
+    <BundleResource Include="Resources\sprites\sprite980.gif" />
+    <BundleResource Include="Resources\sprites\sprite981.gif" />
+    <BundleResource Include="Resources\sprites\sprite982.gif" />
+    <BundleResource Include="Resources\sprites\sprite983.gif" />
+    <BundleResource Include="Resources\sprites\sprite984.gif" />
+    <BundleResource Include="Resources\sprites\sprite985.gif" />
+    <BundleResource Include="Resources\sprites\sprite986.gif" />
+    <BundleResource Include="Resources\sprites\sprite987.gif" />
+    <BundleResource Include="Resources\sprites\sprite988.gif" />
+    <BundleResource Include="Resources\sprites\sprite989.gif" />
+    <BundleResource Include="Resources\sprites\sprite99.gif" />
+    <BundleResource Include="Resources\sprites\sprite990.gif" />
+    <BundleResource Include="Resources\sprites\sprite991.gif" />
+    <BundleResource Include="Resources\sprites\sprite992.gif" />
+    <BundleResource Include="Resources\sprites\sprite993.gif" />
+    <BundleResource Include="Resources\sprites\sprite994.gif" />
+    <BundleResource Include="Resources\sprites\sprite995.gif" />
+    <BundleResource Include="Resources\sprites\sprite996.gif" />
+    <BundleResource Include="Resources\sprites\sprite997.gif" />
+    <BundleResource Include="Resources\sprites\sprite998.gif" />
+    <BundleResource Include="Resources\sprites\sprite999.gif" />
+    <BundleResource Include="Resources\container2.png" />
+    <BundleResource Include="Resources\audio\text.wav" />
+    <BundleResource Include="Resources\audio\doorclose.wav" />
+    <BundleResource Include="Resources\audio\buy1.wav" />
+    <BundleResource Include="Resources\audio\buy2.wav" />
+    <BundleResource Include="Resources\audio\eat.wav" />
+    <BundleResource Include="Resources\audio\miss.wav" />
+    <BundleResource Include="Resources\audio\camera.wav" />
+    <BundleResource Include="Resources\profiles.json" />
+    <BundleResource Include="Resources\tile.png" />
+    <BundleResource Include="Resources\tile-small.png" />
+    <BundleResource Include="Resources\audio\spooky.wav" />
+    <BundleResource Include="Resources\audio\attack1.wav" />
+    <BundleResource Include="Resources\audio\eb_behind.wav" />
+    <BundleResource Include="Resources\audio\eb_newchar.wav" />
+    <BundleResource Include="Resources\audio\006-choose_a_file.mp3" />
+    <BundleResource Include="Resources\grass.png" />
+    <BundleResource Include="Resources\jeff.png" />
+    <BundleResource Include="Resources\ness.png" />
+    <BundleResource Include="Resources\poo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
