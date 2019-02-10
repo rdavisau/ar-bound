@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using CoreGraphics;
+using SceneKit;
 using UIKit;
 
 namespace ARKitMeetup.Helpers
@@ -49,6 +50,13 @@ namespace ARKitMeetup.Helpers
         
             return newImage; 
         }        
+
+        public static void TileTexture(this SCNBox box, int num)
+        {
+            box.FirstMaterial.Diffuse.WrapS = SCNWrapMode.Repeat;
+            box.FirstMaterial.Diffuse.WrapT = SCNWrapMode.Repeat;
+            box.FirstMaterial.Diffuse.ContentsTransform = SCNMatrix4.Scale(num, num, num);
+        }
 
         public static Task<List<TOut>> SelectToListAsync<TIn, TOut>(this IEnumerable<TIn> items,
             Func<TIn, Task<TOut>> selector)

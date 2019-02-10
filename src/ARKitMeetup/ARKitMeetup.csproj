@@ -200,6 +200,7 @@
     <Compile Include="Helpers\Matrix4Extensions.cs" />
     <Compile Include="Demos\D2-VirtualContent\ActionsViewController.cs" />
     <Compile Include="Helpers\WH.cs" />
+    <Compile Include="Helpers\ShaderScene.cs" />
     <Compile Include="Abstractions\BaseViewController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1373,6 +1374,30 @@
     <BundleResource Include="Resources\jeff.png" />
     <BundleResource Include="Resources\ness.png" />
     <BundleResource Include="Resources\poo.png" />
+    <BundleResource Include="Resources\eb_bg\100.png" />
+    <BundleResource Include="Resources\eb_bg\102.png" />
+    <BundleResource Include="Resources\eb_bg\114.png" />
+    <BundleResource Include="Resources\eb_bg\115.png" />
+    <BundleResource Include="Resources\eb_bg\122.png" />
+    <BundleResource Include="Resources\eb_bg\148.png" />
+    <BundleResource Include="Resources\eb_bg\153.png" />
+    <BundleResource Include="Resources\eb_bg\163.png" />
+    <BundleResource Include="Resources\eb_bg\175.png" />
+    <BundleResource Include="Resources\eb_bg\198.png" />
+    <BundleResource Include="Resources\eb_bg\208.png" />
+    <BundleResource Include="Resources\eb_bg\220.png" />
+    <BundleResource Include="Resources\eb_bg\243.png" />
+    <BundleResource Include="Resources\eb_bg\258.png" />
+    <BundleResource Include="Resources\eb_bg\280.png" />
+    <BundleResource Include="Resources\eb_bg\283.png" />
+    <BundleResource Include="Resources\eb_bg\29.png" />
+    <BundleResource Include="Resources\eb_bg\296.png" />
+    <BundleResource Include="Resources\eb_bg\305.png" />
+    <BundleResource Include="Resources\eb_bg\309.png" />
+    <BundleResource Include="Resources\eb_bg\35.png" />
+    <BundleResource Include="Resources\eb_bg\40.png" />
+    <BundleResource Include="Resources\eb_bg\45.png" />
+    <BundleResource Include="Resources\eb_bg\74.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
