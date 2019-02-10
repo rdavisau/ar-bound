@@ -107,6 +107,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -126,6 +127,9 @@
       <HintPath>..\packages\ReactiveUI.Events.9.3.5\lib\xamarinios10\ReactiveUI.Events.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="Mono.CSharp">
+      <HintPath>..\packages\Mono.CSharp.Repl.1.0.0\lib\netstandard2.0\Mono.CSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -195,6 +199,7 @@
     <Compile Include="Demos\D2-VirtualContent\PrefabsSceneViewController.cs" />
     <Compile Include="Helpers\Matrix4Extensions.cs" />
     <Compile Include="Demos\D2-VirtualContent\ActionsViewController.cs" />
+    <Compile Include="Helpers\WH.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="apple_kid.ttf" />
