@@ -18,7 +18,7 @@ namespace ARKitMeetup.Demos.D1
     /// several virtual methods that they can override in order to customise behaviour
     /// </summary>
     [DisplayInMenu(DisplayName = "Base AR Scene", DisplayDescription = "World tracking, nothing else")]
-    public class BaseARViewController : UIViewController
+    public class BaseARViewController : BaseViewController
     {
         private TaskCompletionSource<bool> _pendingTouchCompleter = new TaskCompletionSource<bool>();
         protected bool SessionStarted;

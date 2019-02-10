@@ -200,6 +200,7 @@
     <Compile Include="Helpers\Matrix4Extensions.cs" />
     <Compile Include="Demos\D2-VirtualContent\ActionsViewController.cs" />
     <Compile Include="Helpers\WH.cs" />
+    <Compile Include="Abstractions\BaseViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="apple_kid.ttf" />

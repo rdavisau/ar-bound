@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ARKitMeetup.Demos;
+using ARKitMeetup.Abstractions;
 using ARKitMeetup.Demos.D1;
 using ARKitMeetup.Demos.D4;
 using ARKitMeetup.Helpers;
@@ -14,7 +14,7 @@ using UIKit;
 
 namespace ARKitMeetup
 {
-    public class HomeViewController : UIViewController
+    public class HomeViewController : BaseViewController
     {
         const int MenuViewCapInset = 20;
         const int MenuViewPadding = MenuViewCapInset + 10;
