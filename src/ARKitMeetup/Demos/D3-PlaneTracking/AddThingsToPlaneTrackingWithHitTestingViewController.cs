@@ -55,8 +55,14 @@ namespace ARKitMeetup.Demos.D303
                                  
                 var next = Prefabs.Random().Clone();
                 next.Scale = new SCNVector3(.15f, .15f, .0005f);
-                next.Position = new SCNVector3(wt.Column3.X, wt.Column3.Y, wt.Column3.Z);
+                next.Position = new SCNVector3(wt.Column3.X, wt.Column3.Y + .5f, wt.Column3.Z);
                 next.Look(SCNView.PointOfView.WorldPosition);
+               
+                var body = SCNPhysicsBody.CreateDynamicBody();
+                body.PhysicsShape = SCNPhysicsShape.Create(next, new NSDictionary());
+                body.Restitution = 0.5f;
+                body.Friction = 0.5f;
+                next.PhysicsBody = body;
                 
                 SCNView.Scene.RootNode.AddChildNode(next); 
             }
