@@ -1,0 +1,17 @@
+{
+  "images": [
+    {
+      "filename": "C.png",
+      "scale": "1x",
+      "idiom": "universal"
+    }
+  ],
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  },
+  "properties": {
+    "width": 8.5,
+    "unit": "centimeters"
+  }
+}

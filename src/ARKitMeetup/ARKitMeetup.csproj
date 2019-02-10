@@ -141,6 +141,15 @@
     <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Image.imageset\tile-small.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Untitled 26.png" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\C.arreferenceimage\C.png" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\C.arreferenceimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\D.arreferenceimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\D.arreferenceimage\D.png" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\K.arreferenceimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\K.arreferenceimage\K.png" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\S.arreferenceimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\S.arreferenceimage\S.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -202,6 +211,9 @@
     <Compile Include="Helpers\WH.cs" />
     <Compile Include="Helpers\ShaderScene.cs" />
     <Compile Include="Abstractions\BaseViewController.cs" />
+    <Compile Include="Demos\D4-ImageTracking\Live\ImageTrackingViewController.cs" />
+    <Compile Include="Demos\D4-ImageTracking\ImageTrackingViewController.cs" />
+    <Compile Include="Demos\D4-ImageTracking\ImageTrackingWithSpriteKitController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="apple_kid.ttf" />
@@ -1398,6 +1410,9 @@
     <BundleResource Include="Resources\eb_bg\40.png" />
     <BundleResource Include="Resources\eb_bg\45.png" />
     <BundleResource Include="Resources\eb_bg\74.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Demos\D4-ImageTracking\Live\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
