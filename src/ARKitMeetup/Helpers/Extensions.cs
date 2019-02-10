@@ -23,6 +23,19 @@ namespace ARKitMeetup.Helpers
 
             return null;
         }
+
+        public static void FillWith(this UIView parent, UIView child)
+        {
+            child.TranslatesAutoresizingMaskIntoConstraints = false;
+            parent.AddSubview(child);
+            parent.AddConstraints(new[]
+            {
+                NSLayoutConstraint.Create(child, NSLayoutAttribute.Leading, NSLayoutRelation.Equal, parent, NSLayoutAttribute.Leading, 1, 0),
+                NSLayoutConstraint.Create(child, NSLayoutAttribute.Trailing, NSLayoutRelation.Equal, parent, NSLayoutAttribute.Trailing, 1, 0),
+                NSLayoutConstraint.Create(child, NSLayoutAttribute.Top, NSLayoutRelation.Equal, parent, NSLayoutAttribute.Top, 1, 0),
+                NSLayoutConstraint.Create(child, NSLayoutAttribute.Bottom, NSLayoutRelation.Equal, parent, NSLayoutAttribute.Bottom, 1, 0),
+            });
+        }
         
         public static UIImage Resize(this UIImage image, float toWidth) 
         {

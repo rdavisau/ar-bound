@@ -57,20 +57,15 @@ namespace ARKitMeetup.Demos.D1
             SetupDebugHandlers();
             
             SCNView.Scene = GetInitialScene();
+            
             SetDelegates();
         }
         
         public void SetupARView()
         {
-            SCNView = new ARSCNView { TranslatesAutoresizingMaskIntoConstraints = false };
-            View.AddSubview(SCNView);
-            View.AddConstraints(new[]
-            {
-                NSLayoutConstraint.Create(SCNView, NSLayoutAttribute.Leading, NSLayoutRelation.Equal, View, NSLayoutAttribute.Leading, 1, 0),
-                NSLayoutConstraint.Create(SCNView, NSLayoutAttribute.Trailing, NSLayoutRelation.Equal, View, NSLayoutAttribute.Trailing, 1, 0),
-                NSLayoutConstraint.Create(SCNView, NSLayoutAttribute.Top, NSLayoutRelation.Equal, View, NSLayoutAttribute.Top, 1, 0),
-                NSLayoutConstraint.Create(SCNView, NSLayoutAttribute.Bottom, NSLayoutRelation.Equal, View, NSLayoutAttribute.Bottom, 1, 0),
-            });
+            SCNView = new ARSCNView();
+            
+            View.FillWith(SCNView);
         }
 
         public override async void ViewWillAppear(bool animated)
