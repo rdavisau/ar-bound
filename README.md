@@ -43,6 +43,10 @@ Demonstrates the image detection feature of ARKit. At the event, attendees held 
 
 These calls have been replaced in the sample with hard-coded data. You can print (or display on screen) the Earthbound character files in the Resources folder (ness, paula, jeff, poo) and they will work instead.
 
+## Image Tracking
+
+Demonstrates the image tracking feature of ARKit. These demos used four jumbo playing cards (the King of each suit) which I photographed to use as reference images. It's unlikely that you'll have access to the same deck of cards. Given that, the best approach to running this demo is probably going to be taking photos of your own set of cards and replacing the reference images I've provided. These can be found in the Assets/cards reference group - don't forget to update the physical size properties to match the size of your cards! 
+
 ## Face Tracking
 
 Demonstrates some of the face tracking features of ARKit, in several steps:
