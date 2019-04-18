@@ -16,10 +16,10 @@ namespace ARKitMeetup.Helpers
     {
         private static Random _r = new Random();
     
-        public static ShaderScene Random()
+        public static ShaderScene Random(int num = -1)
         {
             var bgs = NSBundle.MainBundle.PathsForResources(".png", "eb_bg");
-            var bg = bgs[_r.Next(0, bgs.Length)];
+            var bg = num != -1 ? bgs[num] : bgs[_r.Next(0, bgs.Length)]; 
             var img = UIImage.FromFile(bg);
             
             return new ShaderScene(img);
@@ -45,11 +45,11 @@ namespace ARKitMeetup.Helpers
             foreach (var po in parameterOverrides ?? new Dictionary<string, float>())
                 parameters[po.Key] = po.Value;
 
-            var tex = SKTexture.FromImage(forImage);
-            var node = new SKSpriteNode
-            {
+            var tex = SKTexture.FromImage(forImage); 
+            var node = new SKSpriteNode 
+            { 
                 Texture = tex,
-                Size = new CGSize(100, 100),
+                Size = new CGSize(250, 250),
                 AnchorPoint = CGPoint.Empty,
             };
 
@@ -57,7 +57,7 @@ namespace ARKitMeetup.Helpers
 
             AddNodes(node);
 
-            Size = new CGSize(100, 100); 
+            Size = new CGSize(250, 250); 
         }
 
         private SKShader GetShaderForParameters(Dictionary<string, float> parameters)
@@ -68,7 +68,7 @@ namespace ARKitMeetup.Helpers
                 .ToArray();
                 
             var shader = SKShader.FromShaderSourceCode
-            (
+            ( 
                @"
                     void main() {
                     
@@ -79,14 +79,14 @@ namespace ARKitMeetup.Helpers
                         bool isOtherLine = mod(floor(coord.y * 150.), 2.) == 0.;
                         float disty = u_l1_amp * sin(u_l1_freq * coord.x + u_l1_scale * time1); 
     
-                        vec4 c1 = texture2D(u_texture, vec2(coord.x + disty, coord.y - time1 / 4.));
+                        vec4 c1 = texture2D(u_texture, vec2(coord.x + disty, mod(coord.y - time1 / 4.,1.)));
                         if (!isOtherLine)
-                            c1 = texture2D(u_texture, vec2(coord.x - disty, coord.y - time1 / 4.)); 
+                            c1 = texture2D(u_texture, vec2(coord.x - disty, mod(coord.y - time1 / 4.,1.))); 
                     
                         // layer 2
                         vec2 coord2 = v_tex_coord; 
                         
-                        float time2 = u_time * 2.;
+                        float time2 = sin(u_time * 2.);
                         float y2 = coord.y - u_time / 2.; 
     
                         float disty2 = u_l2_amp * sin(u_l2_freq * y2 + u_l2_scale * time2); 
@@ -99,7 +99,7 @@ namespace ARKitMeetup.Helpers
                 ",
                 uniforms );
 
-            return shader;
+            return shader; 
         } 
     }
 }
