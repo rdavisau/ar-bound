@@ -150,6 +150,16 @@
     <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\K.arreferenceimage\K.png" />
     <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\S.arreferenceimage\Contents.json" />
     <ImageAsset Include="Assets.xcassets\cards.arresourcegroup\S.arreferenceimage\S.png" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\lucas.arobject\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\lucas.arobject\preview.jpg" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\lucas.arobject\trackingData.cv3dmap" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\monkey.arobject\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\monkey.arobject\preview.jpg" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\monkey.arobject\trackingData.cv3dmap" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\ness.arobject\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\ness.arobject\preview.jpg" />
+    <ImageAsset Include="Assets.xcassets\objects.arresourcegroup\ness.arobject\trackingData.cv3dmap" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -165,6 +175,7 @@
     <SceneKitAsset Include="art.scnassets\thin-prefab.scn" />
     <SceneKitAsset Include="art.scnassets\starman.scn" />
     <SceneKitAsset Include="art.scnassets\characters\guest b.png" />
+    <SceneKitAsset Include="art.scnassets\basic-panels.scn" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -214,6 +225,7 @@
     <Compile Include="Demos\D4-ImageTracking\Live\ImageTrackingViewController.cs" />
     <Compile Include="Demos\D4-ImageTracking\ImageTrackingViewController.cs" />
     <Compile Include="Demos\D4-ImageTracking\ImageTrackingWithSpriteKitController.cs" />
+    <Compile Include="Demos\D4-ImageTracking\ObjectDetectionViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="apple_kid.ttf" />
@@ -1410,6 +1422,15 @@
     <BundleResource Include="Resources\eb_bg\40.png" />
     <BundleResource Include="Resources\eb_bg\45.png" />
     <BundleResource Include="Resources\eb_bg\74.png" />
+    <BundleResource Include="Resources\audio\win-m1.mp3" />
+    <BundleResource Include="Resources\audio\win-m2.mp3" />
+    <BundleResource Include="Resources\audio\win-m3.mp3" />
+    <BundleResource Include="Resources\m3.png" />
+    <BundleResource Include="Resources\m2.png" />
+    <BundleResource Include="Resources\m1.png" />
+    <BundleResource Include="art.scnassets\characters\m1.png" />
+    <BundleResource Include="art.scnassets\characters\m2.png" />
+    <BundleResource Include="art.scnassets\characters\m3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Demos\D4-ImageTracking\Live\" />
