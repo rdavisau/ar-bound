@@ -64,7 +64,7 @@ namespace ARKitMeetup.Helpers
                 ContentView.AddConstraints(new[] 
                 {
                     NSLayoutConstraint.Create(_content, NSLayoutAttribute.Leading, NSLayoutRelation.Equal, ContentView, NSLayoutAttribute.Leading, 1, 8),
-                    NSLayoutConstraint.Create(_content, NSLayoutAttribute.Trailing, NSLayoutRelation.Equal, ContentView, NSLayoutAttribute.Trailing, 1, 8),
+                    NSLayoutConstraint.Create(_content, NSLayoutAttribute.Trailing, NSLayoutRelation.Equal, ContentView, NSLayoutAttribute.Trailing, 1, -8),
                     NSLayoutConstraint.Create(ContentView, NSLayoutAttribute.Top, NSLayoutRelation.Equal, _content, NSLayoutAttribute.Top, 1, 0),
                     NSLayoutConstraint.Create(ContentView, NSLayoutAttribute.Bottom, NSLayoutRelation.Equal, _content, NSLayoutAttribute.Bottom, 1, 0),
                 });
