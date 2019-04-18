@@ -47,6 +47,10 @@ These calls have been replaced in the sample with hard-coded data. You can print
 
 Demonstrates the image tracking feature of ARKit. These demos used four jumbo playing cards (the King of each suit) which I photographed to use as reference images. It's unlikely that you'll have access to the same deck of cards. Given that, the best approach to running this demo is probably going to be taking photos of your own set of cards and replacing the reference images I've provided. These can be found in the Assets/cards reference group - don't forget to update the physical size properties to match the size of your cards! 
 
+## Object Detection
+
+Demonstrates the object detection feature of ARKit. This is the least reliable of all the demos in the app. The Assets/objects reference group contains scanned models of a Xamarin monkey + two amiibos - ness and lucas. These objects are 'reasonably' easy to get your hands on in the real world, but you could easily replace them with other objects. In any case, my experience was that scanned models were only reliably recognised in the original environment they were scanned in, so you'll be better off replacing and re-scanning them. You can use [Apple's ARScanner app](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects) to generate detection objects. In order to get the Earthbound dialog, name your models 'ninten', 'ness' and 'lucas', or add your own mappings to the `ReplacementNameFor` method.
+
 ## Face Tracking
 
 Demonstrates some of the face tracking features of ARKit, in several steps:
